@@ -3,9 +3,9 @@ import { Header } from "./header/header";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center py-4">
+    <section className="flex flex-col items-center justify-center py-4">
       <Header />
       <Container />
-    </main>
+    </section>
   );
 }

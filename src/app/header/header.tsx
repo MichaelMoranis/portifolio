@@ -1,48 +1,50 @@
 import { BsPersonCircle, BsPlusCircleDotted } from "react-icons/bs";
 import { GrWorkshop } from "react-icons/gr";
+import { HiPlusCircle } from "react-icons/hi";
 import { IoHome } from "react-icons/io5";
 import { SiOnlyoffice } from "react-icons/si";
 import { TiWeatherSunny } from "react-icons/ti";
 
 export function Header() {
   return (
-    <main className="flex items-center justify-center border-s-zinc-600 w-full">
-      <section className="flex items-center justify-around flex-row  h-12 px-4 gap-28 w-96 mx-4 bg-zinc-800 rounded-xl">
+    <section className="flex items-center border-s-zinc-600 w-full rounded-xl md:w-96">
+      <div className="flex items-center justify-between flex-row  h-18 px-1  w-full  bg-zinc-800 rounded-xl">
         <div>
-          <nav>
-            <ul className="flex items-center justify-center gap-4">
+          <nav className="flex">
+            <ul className="flex items-center justify-between gap-6 p-4">
               <li>
                 <a href="#">
-                  <IoHome />
+                  <IoHome className="text-2xl" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <BsPersonCircle />
+                  <BsPersonCircle  className="text-2xl"  />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <GrWorkshop />
+                  <GrWorkshop  className="text-2xl"  />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <SiOnlyoffice />
+                  <SiOnlyoffice  className="text-2xl"  />
                 </a>
               </li>
             </ul>
           </nav>
         </div>
-        <div className="flex flex-row items-center gap-2">
+        <div className="flex flex-row items-center  bg-zinc-800 rounded-md px-2 gap-8">
           <div>
-            <TiWeatherSunny />
+            <TiWeatherSunny  className="text-2xl"  />
           </div>
-          <button className="flex flex-row gap-2 p-1 justify-center items-center bg-zinc-700 rounded-md">
-              hire me
+          <button className="flex items-center gap-2 bg-zinc-700 rounded-md px-2 py-1">
+            <HiPlusCircle />
+              contato
           </button>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }
