@@ -8,7 +8,7 @@ import { TiWeatherSunny } from "react-icons/ti";
 export function Header() {
   return (
     <section className="flex items-center border-s-zinc-600 w-full rounded-xl md:w-4/6 xl:max-w-screen-sm">
-      <div className="flex items-center justify-between flex-row  h-18 px-1  w-full  bg-zinc-800 rounded-xl">
+      <div className="flex items-center justify-between flex-row  h-18 px-1  w-full  bg-zinc-900 rounded-xl">
         <div>
           <nav className="flex">
             <ul className="flex items-center justify-between gap-6 p-4">
@@ -35,7 +35,7 @@ export function Header() {
             </ul>
           </nav>
         </div>
-        <div className="flex flex-row items-center  bg-zinc-800 rounded-md px-2 gap-2">
+        <div className="flex flex-row items-center  bg-zinc-800 rounded-md p-2 gap-2">
           <div>
             <TiWeatherSunny  className="text-2xl"  />
           </div>
