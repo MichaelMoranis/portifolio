@@ -11,7 +11,7 @@ export default function Banner() {
             className="flex items-center md:w-18 md:h-18 justify-center border-cyan-700 bg-slate-400 border-solid rounded-full"
             src="/cara.png"
             width={150}
-            height={150}
+            height={150} 
             alt="imagem perfil"
           />
         </div>

@@ -1,4 +1,4 @@
-import { BsPersonCircle, BsPlusCircleDotted } from "react-icons/bs";
+import { BsPersonCircle } from "react-icons/bs";
 import { GrWorkshop } from "react-icons/gr";
 import { HiPlusCircle } from "react-icons/hi";
 import { IoHome } from "react-icons/io5";
