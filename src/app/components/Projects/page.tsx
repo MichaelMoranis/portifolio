@@ -17,7 +17,7 @@ export default function Projects() {
         damping: 20,
       }}
     >
-      <div className="px-4 bg-zinc-800 w-96 justify-center rounded-md">
+      <div className="px-4 bg-zinc-800 w-96 justify-center rounded-md p-2">
         <div className="flex items-center justify-between p-2 rounded-md">
           <div>Projetos</div>
           <div>

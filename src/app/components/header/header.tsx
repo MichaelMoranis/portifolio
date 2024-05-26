@@ -12,22 +12,22 @@ export function Header() {
         <div>
           <nav className="flex">
             <ul className="flex items-center justify-between gap-6 p-4">
-              <li>
+              <li className="hover:bg-indigo-500 p-2 rounded-md border-s-indigo-600">
                 <a href="/">
                   <IoHome className="text-2xl" />
                 </a>
               </li>
-              <li>
-                <a href={"components/Profile"}>
+              <li className="hover:bg-indigo-500 p-2 rounded-md border-s-indigo-600">
+                <a href="./components/Profile">
                   <BsPersonCircle className="text-2xl"  />
                 </a>
               </li>
-              <li>
+              <li className="hover:bg-indigo-500 p-2 rounded-md border-s-indigo-600">
                 <a href="#">
                   <GrWorkshop  className="text-2xl"  />
                 </a>
               </li>
-              <li>
+              <li className="hover:bg-indigo-500 p-2 rounded-md border-s-indigo-600">
                 <a href="/components/Works">
                   <SiOnlyoffice  className="text-2xl"  />
                 </a>
@@ -35,11 +35,11 @@ export function Header() {
             </ul>
           </nav>
         </div>
-        <div className="flex flex-row items-center  bg-zinc-800 rounded-md p-2 gap-2">
+        <div className="flex flex-row items-center  bg-zinc-800 hover:bg-zinc-600 rounded-md p-2 gap-2">
           <div>
             <TiWeatherSunny  className="text-2xl"  />
           </div>
-          <button className="flex items-center gap-2 bg-zinc-700 rounded-md px-2 py-1">
+          <button className="flex items-center gap-2 bg-zinc-700 hover:bg-indigo-500 rounded-md px-2 py-1">
             <HiPlusCircle />
               contato
           </button>
