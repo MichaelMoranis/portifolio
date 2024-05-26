@@ -28,7 +28,7 @@ export function Header() {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/components/Works">
                   <SiOnlyoffice  className="text-2xl"  />
                 </a>
               </li>

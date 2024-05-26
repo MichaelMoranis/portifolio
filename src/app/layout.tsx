@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "./components/header/header";
 import Nav from "./components/Nav/page";
-import Profile from "./components/Profile/page";
 
 export const metadata: Metadata = {
   title: "Portifolio",
