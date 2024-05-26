@@ -1,19 +1,24 @@
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import Works from "../Works/page";
+import Cards from "../Cards/page";
+import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div className="w-full bg-zinc-800 rounded-md">
-      <div className="flex items-center justify-between p-4 rounded-md">
+    <div className="px-4 bg-zinc-800 w-96 justify-center rounded-md">
+      <div className="flex items-center justify-between p-2 rounded-md">
         <div>Projetos</div>
         <div>
-          <button className="flex items-center gap-2 bg-zinc-700 p-2 rounded-md">
+          <button className="flex gap-2 bg-zinc-700 p-2 rounded-md">
+            <Link href={"components/Works"}>
             ver todos
+            </Link>
             <FaRegArrowAltCircleRight />
           </button>
         </div>
       </div>
-      <Works />
+      <div className="m-1">
+      <Cards />
+      </div>
     </div>
   );
 }

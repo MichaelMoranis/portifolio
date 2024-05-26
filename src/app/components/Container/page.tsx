@@ -6,9 +6,6 @@ import Projects from "../Projects/page";
 export default function Container() {
   return (
     <main>
-      {/* <Nav />
-      <Description />
-      <Projects /> */}
     </main>
   );
 }

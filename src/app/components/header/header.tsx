@@ -13,13 +13,13 @@ export function Header() {
           <nav className="flex">
             <ul className="flex items-center justify-between gap-6 p-4">
               <li>
-                <a href="#">
+                <a href="/">
                   <IoHome className="text-2xl" />
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <BsPersonCircle  className="text-2xl"  />
+                <a href={"components/Profile"}>
+                  <BsPersonCircle className="text-2xl"  />
                 </a>
               </li>
               <li>

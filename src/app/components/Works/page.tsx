@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Description from "../Description/page";
 
 export default function Works() {
   const [repos, setRepos] = useState([]);
@@ -23,7 +24,10 @@ export default function Works() {
     SearchRepo();
   }, []);
   return (
-    <div className=" bg-zinc-600 px-2 m-4 rounded-md">
+   <div>
+    <Description />
+    <h3>Works</h3>
+     <div className=" bg-zinc-600 px-2 m-4 rounded-md">
       <ul>
         {repos.map((repo) => (
           <li key={repo.id}>
@@ -32,5 +36,6 @@ export default function Works() {
         ))}
       </ul>
     </div>
+   </div>
   );
 }
