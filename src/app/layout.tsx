@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Header } from "./components/header/header";
 
 export const metadata: Metadata = {
   title: "Portifolio",
@@ -16,7 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="flex flex-col items-center py-4">
+      <Header />
+        <main className="flex min-h-screen flex-col items-center px-4  bg-zinc-900 my-4 mx-2 w-full md:w-4/6 xl:max-w-screen-sm  rounded-xl gap-8">
+         {children}
+        </main>
+      </body>
     </html>
   );
 }

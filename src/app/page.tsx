@@ -1,11 +1,16 @@
-import Container from "./components/Container/page";
+import Description from "./components/Description/page";
+import Nav from "./components/Nav/page";
+import Projects from "./components/Projects/page";
 import { Header } from "./components/header/header";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center py-4 w-full">
-      <Header />
-      <Container />
-    </section>
+    <>
+      <section>
+        <Nav />
+        <Description />
+        <Projects />
+      </section>
+    </>
   );
 }
