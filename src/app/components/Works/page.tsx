@@ -3,9 +3,17 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Description from "../Description/page";
+import Cards from "../Cards/page";
+
+ interface Repo {
+  id: number;
+  name: string;
+  html_url: string;
+  // Adicione outras propriedades conforme necessário
+}
 
 export default function Works() {
-  const [repos, setRepos] = useState([]);
+  const [repos, setRepos] = useState<Repo[]>([]);
 
   useEffect(() => {
     async function SearchRepo() {
@@ -17,6 +25,7 @@ export default function Works() {
           throw new Error("deu tudo errado na requisicao");
         }
         const data = await response.json();
+        console.log(data)
         setRepos(data);
       } catch (error) {
         console.log(`deu tudo errado aqui tambem no catch ${error}`);
@@ -28,22 +37,23 @@ export default function Works() {
     <div>
       <Description />
       <h3>Projetos</h3>
-      <motion.div 
-              initial={{ x: 300, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 300, opacity: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 20,
-              }}
-       
-       >
-        <div className=" bg-zinc-600 px-2 m-4 rounded-md">
-          <ul>
+      <motion.div
+        initial={{ x: 300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: 300, opacity: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+        }}
+      >
+        <div className=" bg-zinc-800 w-full  px-2  py-4 rounded-md">
+          <ul className="flex flex-col gap-4">
             {repos.map((repo) => (
-              <li key={repo.id}>
-                <li>{repo.name}</li>
+              <li key={repo.id} className="rounded-md">
+                <Cards key={repo.id} link={repo.html_url}>
+                 {repo.name}
+                </Cards>
               </li>
             ))}
           </ul>

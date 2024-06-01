@@ -1,11 +1,15 @@
-"use client"
+"use client";
 
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import Cards from "../Cards/page";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Cards from "../Cards/page";
 
-export default function Projects() {
+interface Props {
+  html_url: string;
+}
+
+export default function Projects({ html_url }: Props) {
   return (
     <motion.div
       initial={{ x: 300, opacity: 0 }}
@@ -14,10 +18,10 @@ export default function Projects() {
       transition={{
         type: "spring",
         stiffness: 260,
-        damping: 20,
+        damping: 40,
       }}
     >
-      <div className="px-4 bg-zinc-800 w-96 justify-center rounded-md p-2">
+      <div className="bg-zinc-800 w-96  justify-between rounded-md p-1">
         <div className="flex items-center justify-between p-2 rounded-md">
           <div>Projetos</div>
           <div>
@@ -27,8 +31,10 @@ export default function Projects() {
             </button>
           </div>
         </div>
-        <div className="m-1">
-          <Cards />
+        <div className="flex flex-col gap-4">
+          <Cards link={html_url}>sou o projeto cards</Cards>
+          <Cards link={html_url}>sou o projeto cards</Cards>
+          <Cards link={html_url}>sou o projeto cards</Cards>
         </div>
       </div>
     </motion.div>

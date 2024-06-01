@@ -1,14 +1,24 @@
-"use client"
+"use client";
 
 import Image from "next/image";
+import { ReactNode } from "react";
 
-export default function Cards() {
+interface ParentsProps {
+  children: string;
+  link: string
+}
+
+export default function Cards({ children, link }: ParentsProps) {
   return (
-    <section className="flex justify-start p-4 bg-zinc-600 rounded-md mb-4">
-      <div className="flex flex-col justify-center p-2 w-full gap-4">
-        <div className="flex flex-row gap-4 h-12 bg-zinc-500 p-2 w-full rounded-md"><Image width={30} height={30} src="/icon.png" alt="" /><a href="https://github.com/MichaelMoranis/adivinhe-o-numero">jogo adivinhe o numero</a></div>
-        <div className="h-12 bg-zinc-500 p-2 w-full rounded-md">works 02</div>
-        <div className="h-12 bg-zinc-500 p-2 w-full rounded-md">works 03</div>
+    <section className="flex justify-center border-2 border-current border-zinc-700 bg-zinc-800 gap rounded-md">
+      <div className="flex flex-col justify-around p-2 w-full gap-2">
+        <div className="flex flex-col h-32 gap-2 p-2 w-full rounded-md">
+          <Image width={30} height={30} src="/icon.png" alt="icon for works" />
+          <h3 className="text-xl">
+            {children}
+          </h3>
+          <a className="text-start w-20" href={link}>ver mais</a>
+        </div>
       </div>
     </section>
   );
