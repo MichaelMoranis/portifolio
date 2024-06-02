@@ -34,11 +34,10 @@ export default function Works() {
     SearchRepo();
   }, []);
   return (
-    <div>
+    <div className="w-full">
       <Description />
-      <h3>Projetos</h3>
       <motion.div
-        initial={{ x: 300, opacity: 0 }}
+        initial={{ x: 60, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 300, opacity: 0 }}
         transition={{
@@ -46,7 +45,9 @@ export default function Works() {
           stiffness: 260,
           damping: 20,
         }}
+        className="bg-zinc-800"
       >
+      <h3 className="bg-zinc-800">Projetos</h3>
         <div className=" bg-zinc-800 w-full  px-2  py-4 rounded-md">
           <ul className="flex flex-col gap-4">
             {repos.map((repo) => (

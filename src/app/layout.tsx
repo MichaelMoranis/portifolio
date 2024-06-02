@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "./components/header/header";
 import Nav from "./components/Nav/page";
+import Outdoor from "./components/Outdoor";
 
 export const metadata: Metadata = {
   title: "Portifolio",
@@ -17,10 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col items-center py-4">
       <Header />
-        <main className="flex min-h-screen flex-col items-center  px-4  bg-zinc-900 my-4 mx-2 w-full md:w-4/6 xl:max-w-screen-sm  rounded-xl gap-8">
+        <main className="flex min-h-screen flex-col items-center  px-4 py-4  bg-zinc-900 mx-2 md:w-4/6 xl:max-w-screen-sm  rounded-xl gap-6">
         <Nav />
          {children}
         </main>
+        <Outdoor />
       </body>
     </html>
   );

@@ -12,7 +12,7 @@ interface Props {
 export default function Projects({ html_url }: Props) {
   return (
     <motion.div
-      initial={{ x: 300, opacity: 0 }}
+      initial={{ x: 60, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: 300, opacity: 0 }}
       transition={{
@@ -20,18 +20,20 @@ export default function Projects({ html_url }: Props) {
         stiffness: 260,
         damping: 40,
       }}
+      className="w-full"
     >
-      <div className="bg-zinc-800 w-96  justify-between rounded-md p-1">
-        <div className="flex items-center justify-between p-2 rounded-md">
+      <div className="w-full">
+        <div className="flex w-full items-center justify-between p-2 rounded-md">
           <div>Projetos</div>
           <div>
-            <button className="flex gap-2 bg-zinc-700 p-2 rounded-md">
+            <button className="flex gap-2 items-center bg-zinc-700 p-2 rounded-md">
               <Link href={"components/Works"}>ver todos</Link>
               <FaRegArrowAltCircleRight />
             </button>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex  flex-col w-full gap-4">
+          <Cards link={html_url}>sou o projeto cards</Cards>
           <Cards link={html_url}>sou o projeto cards</Cards>
           <Cards link={html_url}>sou o projeto cards</Cards>
           <Cards link={html_url}>sou o projeto cards</Cards>

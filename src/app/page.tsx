@@ -3,11 +3,11 @@ import Projects from "./components/Projects/page";
 
 export default function Home() {
   return (
-    <>
-      <section className="flex flex-col items-center w-full gap-6">
+    <div className="flex flex-col gap-8 p-6 w-full rounded-md bg-zinc-800">
+      <section className="flex bg-zinc-700 flex-col items-center w-full">
         <Description />
-        <Projects html_url="#" />
       </section>
-    </>
+      <Projects html_url="#" />
+    </div>
   );
 }

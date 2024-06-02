@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function Banner() {
   return (
-    <div className="flex flex-col justify-around items-center">
-      <div className="flex flex-col items-center justify-around gap-6 w-full md:flex-row md:items-center  m-2 px-6">
+    <div className="flex flex-col w-full justify-around items-center bg-zinc-800">
+      <div className="flex flex-col items-center justify-around gap-6 w-full md:flex-row md:items-center  m-2 px-6 bg-zinc-800">
         <div>
           <Image
-            className="flex items-center md:w-18 md:h-18 justify-center border-cyan-700 bg-slate-400 border-solid rounded-full"
+            className="flex items-center md:w-18 md:h-18 justify-center border-cyan-700 bg-zinc-400 border-solid rounded-full"
             src="/cara.png"
             width={150}
             height={150} 
@@ -24,7 +24,7 @@ export default function Banner() {
               Desenvolvedor web, atualmente morando em Cascavel PR. !!
             </h3>
           </div>
-          <button className="flex items-center justify-center gap-2 bg-zinc-800 rounded-md px-4 py2 py-1 w-32">
+          <button className="flex items-center justify-center gap-2 bg-zinc-700 rounded-md px-4 py2 py-1 w-32">
             e-mail
           </button>
         </div>
