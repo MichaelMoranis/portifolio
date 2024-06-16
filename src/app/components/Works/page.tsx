@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Description from "../Description/page";
 import Cards from "../Cards/page";
+import Outdoor from "../Outdoor";
 
  interface Repo {
   id: number;
@@ -45,7 +46,7 @@ export default function Works() {
           stiffness: 260,
           damping: 20,
         }}
-        className="bg-zinc-800"
+        className="bg-zinc-800 p-4  text-wrap flex-wrap"
       >
       <h3 className="bg-zinc-800">Projetos</h3>
         <div className=" bg-zinc-800 w-full  px-2  py-4 rounded-md">
@@ -59,6 +60,7 @@ export default function Works() {
             ))}
           </ul>
         </div>
+        <Outdoor />
       </motion.div>
     </div>
   );

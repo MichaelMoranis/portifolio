@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { ReactNode } from "react";
-
 interface ParentsProps {
   children: string;
   link: string

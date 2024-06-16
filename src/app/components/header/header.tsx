@@ -35,11 +35,11 @@ export function Header() {
             </ul>
           </nav>
         </div>
-        <div className="flex flex-row items-center  bg-zinc-800 hover:bg-zinc-600 rounded-md p-2 gap-2">
+        <div className="flex flex-row items-center bg-zinc-800 hover:bg-zinc-600 rounded-md p-2 gap-2">
           <div>
             <TiWeatherSunny  className="text-2xl"  />
           </div>
-          <button className="flex items-center gap-2 bg-zinc-700 hover:bg-indigo-500 rounded-md px-2 py-1">
+          <button className="hidden md:flex items-center gap-2 bg-zinc-700 hover:bg-indigo-500 rounded-md px-2 py-1">
             <HiPlusCircle />
               contato
           </button>

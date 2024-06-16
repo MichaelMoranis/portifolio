@@ -24,7 +24,7 @@ export default function Banner() {
               Desenvolvedor web, atualmente morando em Cascavel PR. !!
             </h3>
           </div>
-          <button className="flex items-center justify-center gap-2 bg-zinc-700 rounded-md px-4 py2 py-1 w-32">
+          <button className="flex items-center justify-center gap-2 bg-zinc-700 rounded-md px-4 py2 py-1 w-32 hover:bg-indigo-700">
             e-mail
           </button>
         </div>

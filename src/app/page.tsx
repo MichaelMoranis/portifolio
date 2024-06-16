@@ -1,4 +1,6 @@
 import Description from "./components/Description/page";
+import Footer from "./components/Footer";
+import Outdoor from "./components/Outdoor";
 import Projects from "./components/Projects/page";
 
 export default function Home() {
@@ -8,6 +10,7 @@ export default function Home() {
         <Description />
       </section>
       <Projects html_url="#" />
+      <Outdoor />
     </div>
   );
 }

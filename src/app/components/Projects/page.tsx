@@ -26,17 +26,17 @@ export default function Projects({ html_url }: Props) {
         <div className="flex w-full items-center justify-between p-2 rounded-md">
           <div>Projetos</div>
           <div>
-            <button className="flex gap-2 items-center bg-zinc-700 p-2 rounded-md">
+            <button className="flex gap-2 items-center bg-zinc-700 p-2 rounded-md hover:bg-indigo-700">
               <Link href={"components/Works"}>ver todos</Link>
               <FaRegArrowAltCircleRight />
             </button>
           </div>
         </div>
         <div className="flex  flex-col w-full gap-4">
-          <Cards link={html_url}>sou o projeto cards</Cards>
-          <Cards link={html_url}>sou o projeto cards</Cards>
-          <Cards link={html_url}>sou o projeto cards</Cards>
-          <Cards link={html_url}>sou o projeto cards</Cards>
+          <Cards link={html_url}>Jogo adivinhe o numero</Cards>
+          <Cards link={html_url}>Projeto pro orcamentos</Cards>
+          <Cards link={html_url}>Construcao do tema NeoOsaka theme</Cards>
+          <Cards link={html_url}>Projeto LinkTree Copia</Cards>
         </div>
       </div>
     </motion.div>
