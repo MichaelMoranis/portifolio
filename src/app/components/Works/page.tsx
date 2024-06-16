@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Description from "../Description/page";
-import Cards from "../Cards/page";
+import {Cards} from "../Cards";
 import Outdoor from "../Outdoor";
 
  interface Repo {

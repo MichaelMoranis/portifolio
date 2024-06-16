@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col items-center justify-center py-4 gap-4 sm:w-full">
       <Header />
-        <main className="flex flex-col items-center gap-4 border-s-zinc-600 bg-zinc-800 w-full rounded-xl md:w-4/6 xl:max-w-screen-sm">
+        <main className="flex flex-col items-center border-s-zinc-600 bg-zinc w-full rounded-xl md:w-4/6 xl:max-w-screen-sm">
         <Nav />
          {children}
         </main>

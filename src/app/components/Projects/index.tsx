@@ -3,7 +3,8 @@
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Cards from "../Cards/page";
+import { Cards } from "../Cards";
+
 
 interface Props {
   html_url: string;

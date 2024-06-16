@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import React from "react";
+
 interface ParentsProps {
-  children: string;
+  children: React.ReactNode;
   link: string
 }
-
-export default function Cards({ children, link }: ParentsProps) {
+export function Cards ({children, link}: ParentsProps)  {
   return (
     <section className="flex justify-center border-2 border-current border-zinc-700 bg-zinc-800 gap rounded-md">
       <div className="flex flex-col justify-around p-2 w-full gap-2">
@@ -21,3 +22,5 @@ export default function Cards({ children, link }: ParentsProps) {
     </section>
   );
 }
+
+

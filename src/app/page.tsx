@@ -1,7 +1,6 @@
 import Description from "./components/Description/page";
-import Footer from "./components/Footer";
 import Outdoor from "./components/Outdoor";
-import Projects from "./components/Projects/page";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
