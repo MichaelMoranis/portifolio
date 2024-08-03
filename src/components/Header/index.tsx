@@ -1,5 +1,5 @@
 import  gitHubIcon  from "../../assets/github.png";
-import linkedinIcon from "../../assets/linkedin-mod.png"
+import linkedinIcon from "../../assets/linkedin.png"
 
 function Header() {
   return (
