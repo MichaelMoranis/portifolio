@@ -1,7 +1,9 @@
 import Banner from "./components/Banner";
 import Button from "./components/Button";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Perfil from "./components/Perfil";
+import Projects from "./components/Projects";
 import Work from "./components/Work/intex";
 import WorkText from "./components/WorkText";
 
@@ -17,6 +19,8 @@ function App() {
         <Work text="Bio" />
         <WorkText yearStudent="1996" textWork="ano de nascimento em Barreiras BA." />
         <WorkText textWork="Inicio da faculdade em analise e desenvolvimento de sistemas" yearStudent="2024" yearDescription="Comeco da faculdade analise e desenvolvimento  de sistemas."/>
+        <Projects />
+        <Footer />
     </main>
   );
 }
