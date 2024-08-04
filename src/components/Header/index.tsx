@@ -1,10 +1,11 @@
-import  gitHubIcon  from "../../assets/github.png";
-import linkedinIcon from "../../assets/linkedin.png"
+import sunIcon from "../../assets/sun.png"
+import burguerMenu from "../../assets/hambuger.png"
+
 
 function Header() {
   return (
-    <header className="flex items-center justify-center w-full rounded-xl">
-      <div className="p-1 flex w-full justify-between m-4 gap-6 items-center">
+    <header className="flex items-center justify-center w-full  rounded-xl">
+      <div className="p-1 flex w-full justify-between items-center m-2">
         <div>
           <h1 className="text-zinc-300 font-bold text-2xl">moranisdev</h1>
         </div>
@@ -22,8 +23,8 @@ function Header() {
                 rel="noopener noreferrer"
                 className="text-white"
               >
-                <img src={gitHubIcon} className="h-12 w-12 md:w-14 md:h-14 bg-zinc-300 rounded-full" />
-              </a>
+                <img src={sunIcon} className="h-8 w-8 md:w-12 md:h-12 bg-zinc-300 rounded-full" />
+              </a> 
             </li>
             <li>
               <a
@@ -32,7 +33,7 @@ function Header() {
                 rel="noopener noreferrer"
                 className="text-white"
               >
-                 <img src={linkedinIcon} className="h-12 w-12 md:w-14 md:h-14 bg-zinc-300 rounded-full" />
+                 <img src={burguerMenu} className="h-8 w-8 md:w-12 md:h-12 bg-zinc-300 rounded-full" />
               </a>
             </li>
           </ul>
