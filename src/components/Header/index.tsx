@@ -1,17 +1,18 @@
 import sunIcon from "../../assets/sun.png"
 import burguerMenu from "../../assets/hambuger.png"
+import { Link } from "react-router-dom";
 
 
 function Header() {
   return (
     <header className="flex items-center justify-center w-full  rounded-xl">
-      <div className="p-1 flex w-full justify-between items-center m-2">
+      <div className="flex w-full justify-between items-center mx-10 my-2">
         <div>
-          <h1 className="text-zinc-300 font-bold text-2xl">moranisdev</h1>
+          <h1 className="text-zinc-300 font-bold text-2xl hover:underline"><Link to="/">moranesdev</Link></h1>
         </div>
         <ul className="gap-4 text-zinc-300 font-bold text-2xl hidden sm:flex justify-between">
-          <li className="hover:underline">trabalhos</li>
           <li className="hover:underline">posts</li>
+          <li className="hover:underline"><Link to="/works">jobs</Link></li>
           <li className="hover:underline">sobre</li>
         </ul>
         <nav>
