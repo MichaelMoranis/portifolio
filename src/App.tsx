@@ -7,7 +7,7 @@ import WorkText from "./components/WorkText";
 
 function App() {
   return (
-    <main className="flex flex-col items-center mx-auto w-full lg:max-w-4xl lg:w-screen">
+    <main className="flex flex-col items-center mx-auto w-full lg:max-w-4xl lg:w-screen p-2">
       <Banner />
       <Work text="Perfil" />
       <Perfil />
