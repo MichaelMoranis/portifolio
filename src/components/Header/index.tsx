@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="flex items-center justify-center w-full  rounded-xl">
-      <div className="flex w-full justify-between items-center mx-10 my-2">
+    <header className="flex items-center justify-center w-full rounded-xl">
+      <div className="flex w-full justify-between items-center my-1">
         <div>
           <h1 className="text-zinc-300 font-bold text-2xl hover:underline"><Link to="/">moranesdev</Link></h1>
         </div>

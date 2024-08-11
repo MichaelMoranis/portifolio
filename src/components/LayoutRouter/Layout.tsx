@@ -7,7 +7,7 @@ function Layout() {
     return (
       <div className="flex flex-col items-center gap-5 justify-evenly mx-auto w-full lg:max-w-4xl p-4">
         <Header />
-        <main className="mb-6">
+        <main className="flex flex-col items-center gap-5 justify-evenly mx-auto w-full lg:max-w-4xl p-4 mb-6">
           <Outlet />
         </main>
         <Footer />
