@@ -6,12 +6,12 @@ import WorkText from "./components/WorkText";
 
 function App() {
   return (
-    <main className="flex flex-col items-center gap-6 justify-evenly mx-auto w-full lg:max-w-4xl">
+    <main className="flex flex-col items-center gap-6 justify-evenly mx-auto w-full lg:max-w-4xl overflow-hidden px-4">
       <Banner />
       <Perfil />
       <WorkText textWork="Michael é um desenvolvedor full-stack e freelancer morando em Cascavel. Com uma paixão por criar serviços digitais/coisas que ele deseja, tem talento para tudo relacionado ao lançamento de produtos, desde o planejamento e design até a solução de problemas reais com código. Quando não estou online, gosto de sair com minha câmera, ouvir musica, etc. Faço meu serviço como freela, entre em contato para conversarmos sobre negócios !" />
       <Button />
-      <div className="flex flex-col items-center content-center justify-center">
+      <div className="flex flex-col items-center content-center justify-center w-full px-4">
         {/* <Work text="Bio" /> */}
         <WorkText
           yearStudent="1996"
