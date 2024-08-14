@@ -7,7 +7,7 @@ import ErrorPage from './error-page.tsx'
 import NewPage from './pages/newPage.tsx'
 import Layout from './components/LayoutRouter/Layout.tsx'
 import Works from './pages/works.tsx'
-import Images from './pages/Images.tsx'
+import Images from './pages/images.tsx'
 
 const router = createBrowserRouter([
   {
