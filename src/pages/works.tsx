@@ -20,7 +20,7 @@ function Works() {
           desenvolvedor web !
         </p>
       </div>
-      <section className="flex flex-col items-center gap-5 justify-evenly mx-4 w-80 lg:max-w-4xl p-4">
+      <section className="flex flex-col items-center gap-5 justify-evenly mx-4 w-80 lg:max-w-4xl p-4 md:w-full md:flex-row">
         <a
           href="https://app-tarefa.vercel.app"
           target="_blank"

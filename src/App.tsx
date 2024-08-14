@@ -1,13 +1,10 @@
-import Projects from "./components/Articles";
+import Articles from "./components/Articles";
 import Banner from "./components/Banner";
 import Button from "./components/Button";
 import Perfil from "./components/Perfil";
 import WorkText from "./components/WorkText";
 
 function App() {
-
-
-
   return (
     <main className={"flex flex-col items-center gap-6 justify-evenly mx-auto w-full lg:max-w-4xl px-4"}>
       <Banner />
@@ -29,7 +26,7 @@ function App() {
           yearStudent="2024"
         />
       </div>
-      <Projects />
+      <Articles />
     </main>
   );
 }
