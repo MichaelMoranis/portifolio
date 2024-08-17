@@ -8,6 +8,7 @@ import NewPage from './pages/newPage.tsx'
 import Layout from './components/LayoutRouter/Layout.tsx'
 import Works from './pages/works.tsx'
 import Images from './pages/images.tsx'
+import Setup from './pages/setup.tsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: 'images',
         element: <Images />,
+      },
+      {
+        path: 'setup',
+        element: <Setup />,
       },
     ],
   },

@@ -25,7 +25,7 @@ function Layout() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className={`flex flex-col items-center gap-5 justify-evenly mx-auto w-full md:max-w-2xl lg:max-w-4xl p-4 dark:bg-zinc-100 ${darkMode ? 'text-black' : 'text-white'}`}>
+      <div className={`flex flex-col items-center gap-5 justify-evenly mx-auto w-full md:max-w-2xl lg:max-w-4xl p-4 dark:bg-zinc-100 ${darkMode ? 'text-black' : 'text-white'} font-regular`}>
         <main className="flex flex-col items-center gap-5 justify-evenly mx-auto w-full lg:max-w-4xl p-4 mb-6">
           <header className="flex items-center justify-center w-full rounded-xl">
             <div className="flex w-full justify-between items-center my-1">

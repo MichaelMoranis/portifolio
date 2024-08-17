@@ -8,7 +8,7 @@ function Images() {
   return (
     <section className="flex flex-col items-center gap-5 justify-evenly mx-4 w-80 md:flex-row md:w-full lg:max-w-4xl p-4">
       <div className="flex flex-col w-full gap-4">
-        <h1 className="font-bold text-xl">Minha seção de imagens amadoras usando uma Canon T6 Rebel EOS!</h1>
+        <h1 className="font-regular font-bold text-4xl ">Minha seção de imagens amadoras usando uma Canon T6 Rebel EOS!</h1>
         <h3>
           Recentemente tenho me aventurado a praticar fazer algumas fotografias,
           percebi que tinha encontrado mais um novo hobbie, e desde entao tenho
@@ -31,7 +31,7 @@ function Images() {
         className="h-52 w-80 my-4 md:w-80 rounded-lg"
       >
         <p className=" border-b-4 border-b-zinc-600 mb-2">
-          Paixão por fotos e imagens.
+         Elementos da natureza.
         </p>
         <img
           className="rounded-xl h-52 w-96"
@@ -43,7 +43,7 @@ function Images() {
         className="h-52 w-80 my-4 md:w-80 rounded-lg"
       >
         <p className=" border-b-4 border-b-zinc-600 mb-2">
-          Paixão por fotos e imagens.
+          Engenharia e arquitetura.
         </p>
         <img
           className="rounded-xl h-52 w-96"
@@ -55,23 +55,11 @@ function Images() {
         className="h-52 w-80 my-4 md:w-80 rounded-lg"
       >
         <p className=" border-b-4 border-b-zinc-600 mb-2">
-          Paixão por fotos e imagens.
+         Àrvores e plantas.
         </p>
         <img
           className="rounded-xl h-52 w-96"
           src={forest}
-          alt="aplicacao lista de tarefas"
-        />
-      </div>
-      <div
-        className="h-52 w-80 my-4 md:w-80 rounded-lg"
-      >
-        <p className=" border-b-4 border-b-zinc-600 mb-2">
-          Paixão por fotos e imagens.
-        </p>
-        <img
-          className="rounded-xl h-52 w-96"
-          src={street}
           alt="aplicacao lista de tarefas"
         />
       </div>
