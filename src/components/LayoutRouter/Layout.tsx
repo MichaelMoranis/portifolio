@@ -33,11 +33,11 @@ function Layout() {
       >
         <main className="flex flex-col items-center gap-5 justify-evenly w-full lg:max-w-4xl p-4">
           <header
-            className={`flex items-center justify-center w-full rounded-b-xl fixed top-0 left-0 z-10 ${
+            className={`flex items-center justify-center w-full rounded-b-2xl fixed top-0 left-0 z-10 ${
               darkMode ? "bg-white" : "bg-zinc-700"
             }`}
           >
-            <div className="flex w-full justify-center gap-24 items-center p-2">
+            <div className="flex w-full justify-center gap-24 items-center p-2 backdrop-blur-2xl rounded-md">
               <div>
                 <h1 className="font-bold text-2xl hover:underline">
                   <Link to="/">moranesdev</Link>
