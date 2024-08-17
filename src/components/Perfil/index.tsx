@@ -2,7 +2,7 @@ import perfil from "../../assets/perfilmod.png"
 
 function Perfil() {
     return (
-       <div className="flex flex-col md:flex-row items-center justify-between w-full  sm:w-2/3 md:w-4/3">
+       <div className="flex flex-col md:flex-row items-center m-auto justify-between w-full  sm:w-2/3 md:w-4/3">
           <div className="flex flex-col justify-center">
             <h2 className="font-bold text-3xl">
                 Michael Moranis

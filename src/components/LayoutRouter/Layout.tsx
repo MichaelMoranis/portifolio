@@ -27,7 +27,7 @@ function Layout() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div
-        className={`flex flex-col items-center gap-5 justify-evenly mx-auto w-full md:max-w-2xl lg:max-w-4xl p-4 dark:bg-zinc-100 ${
+        className={`flex flex-col items-center gap-5 justify-evenly w-full md:max-w-2xl lg:max-w-4xl p-4 dark:bg-zinc-100 ${
           darkMode ? "text-black" : "text-white"
         } font-regular`}
       >
