@@ -6,7 +6,7 @@ import WorkText from "./components/WorkText";
 
 function App() {
   return (
-    <main className={"flex flex-col items-center gap-6 justify-evenly mx-auto w-full lg:max-w-4xl px-4 font-regular m-10"}>
+    <main className={"flex flex-col items-center gap-6 justify-evenly w-full lg:max-w-4xl px-4 font-regular m-10"}>
       <Banner />
       <Perfil />
       <WorkText textWork="Michael é um desenvolvedor full-stack e freelancer morando em Cascavel PR. Com uma paixão para criar serviços digitais e coisas que ele deseja, em constante busca por lançamentos de produtos no mercado,  desde o planejamento e design até a solução de problemas reais com código. Quando não estou online, gosto de sair com minha câmera, ouvir musica, praticar meditação etc. Faço meu serviço como freela, entre em contato para conversarmos sobre negócios e fazer orçamentos!" />
