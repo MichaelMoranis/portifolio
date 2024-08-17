@@ -15,7 +15,7 @@ function Works() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <section className="flex flex-col items-center gap-6 justify-evenly mx-4 mt-10 w-80 md:flex-row md:w-full lg:max-w-4xl p-4">
+      <section className="flex flex-col items-center gap-6 justify-evenly mx-4 mt-6 w-80 md:flex-row md:w-full lg:max-w-4xl p-4">
         <div className="flex flex-col items-center justify-center full gap-5 mx-8 lg:max-w-4xl lg:w-screen font-regular font-bold mt-10">
           <div className="flex flex-col items-center justify-center w-full">
             <div className="w-64 mx-4 md:w-4/3 p-6">
