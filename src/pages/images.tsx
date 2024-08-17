@@ -6,7 +6,7 @@ import forest from "../pages/images/forest.jpg";
 
 function Images() {
   return (
-    <section className="flex flex-col items-center gap-5 justify-evenly mx-4 w-80 md:flex-row md:w-full lg:max-w-4xl p-4">
+    <section className="flex flex-col items-center gap-5 justify-evenly mx-4 w-80 mt-10 md:flex-row md:w-full lg:max-w-4xl p-4">
       <div className="flex flex-col w-full gap-4">
         <h1 className="font-regular font-bold text-4xl ">Minha seção de imagens amadoras usando uma Canon T6 Rebel EOS!</h1>
         <h3>

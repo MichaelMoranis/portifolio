@@ -27,8 +27,8 @@ function Layout() {
     <div className={darkMode ? "dark" : ""}>
       <div className={`flex flex-col items-center gap-5 justify-evenly mx-auto w-full md:max-w-2xl lg:max-w-4xl p-4 dark:bg-zinc-100 ${darkMode ? 'text-black' : 'text-white'} font-regular`}>
         <main className="flex flex-col items-center gap-5 justify-evenly mx-auto w-full lg:max-w-4xl p-4 mb-6">
-          <header className="flex items-center justify-center w-full rounded-xl">
-            <div className="flex w-full justify-between items-center my-1">
+          <header className={`flex items-center justify-center w-full rounded-b-xl fixed top-0 left-0 p-1 z-10 mb-10 ${darkMode ? 'bg-white' :'bg-zinc-700' }`}>
+            <div className="flex w-full justify-between items-center my-1 px-2">
               <div>
                 <h1 className="font-bold text-2xl hover:underline">
                   <Link to="/">moranesdev</Link>
