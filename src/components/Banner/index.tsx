@@ -4,7 +4,7 @@ import Bar from "../Bar";
 function Banner() {
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      <div className="w-96 mx-4 md:w-4/3 px-6 pb-4">
+      <div className="w-96 md:w-4/3 px-6 pb-4">
         <img
           className="rounded-md"
           src={imgBanner}

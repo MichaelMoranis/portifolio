@@ -37,7 +37,7 @@ function Layout() {
               darkMode ? "bg-white" : "bg-zinc-700"
             }`}
           >
-            <div className="flex w-full justify-between items-center my-1 px-2">
+            <div className="flex w-full justify-between items-center px-2">
               <div>
                 <h1 className="font-bold text-2xl hover:underline">
                   <Link to="/">moranesdev</Link>
@@ -51,7 +51,7 @@ function Layout() {
                 <li className="hover:underline">sobre</li>
               </ul>
               <nav>
-                <ul className="flex gap-4 items-center justify-between">
+                <ul className="flex gap-2 items-center justify-between">
                   <li>
                     <button onClick={toggleDisplayMode}>
                       <img
