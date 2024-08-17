@@ -1,6 +1,8 @@
 import imagelist from "../assets/tarefa.jpeg";
 import orcamentos from "../assets/orçamentos.jpg";
 import imgBanner from "../assets/bannerWork.png";
+import linkmichael from "../pages/images/linkmichael.jpg"
+import linkmiss from "../pages/images/linkmiss.jpg"
 import { motion } from "framer-motion";
 
 function Works() {
@@ -57,6 +59,32 @@ function Works() {
               <img
                 className="rounded-xl h-52 w-96"
                 src={orcamentos}
+                alt="mesa de trabalho"
+              />
+            </a>
+            <a
+              href="https://linktree-midia.vercel.app/"
+              className="h-52 w-80 my-4 md:w-80 rounded-lg"
+            >
+              <p className="border-b-4 border-b-zinc-600 mb-2">
+                Página web link para redes sociais.
+              </p>
+              <img
+                className="rounded-xl h-52 w-96"
+                src={linkmichael}
+                alt="mesa de trabalho"
+              />
+            </a>
+            <a
+              href="https://medeiros.vercel.app/"
+              className="h-52 w-80 my-4 md:w-80 rounded-lg"
+            >
+              <p className="border-b-4 border-b-zinc-600 mb-2">
+                Página web link para redes sociais para minha esposa.
+              </p>
+              <img
+                className="rounded-xl h-52 w-96"
+                src={linkmiss}
                 alt="mesa de trabalho"
               />
             </a>
