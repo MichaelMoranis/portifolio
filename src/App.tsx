@@ -17,7 +17,7 @@ function App() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <section className="flex flex-col items-center gap-6 justify-evenly mt-5 w-80 md:flex-row md:w-full lg:max-w-4xl p-4">
+      <section className="flex flex-col items-center gap-6 mt-5 w-80 md:flex-row md:w-full lg:max-w-4xl p-4">
         <Banner />
         <Perfil />
         <WorkText textWork="Michael é um desenvolvedor full-stack e freelancer morando em Cascavel PR. Com uma paixão para criar serviços digitais e coisas que ele deseja, em constante busca por lançamentos de produtos no mercado,  desde o planejamento e design até a solução de problemas reais com código. Quando não estou online, gosto de sair com minha câmera, ouvir musica, praticar meditação etc. Faço meu serviço como freela, entre em contato para conversarmos sobre negócios e fazer orçamentos!" />

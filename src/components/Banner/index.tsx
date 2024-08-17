@@ -3,10 +3,10 @@ import Bar from "../Bar";
 
 function Banner() {
   return (
-    <div className="flex flex-col items-center justify-center w-full">
-      <div className="w-96 md:w-4/3 px-6 pb-4">
+    <div className="flex flex-col items-center justify-between w-80">
+      <div className="w-full pb-4">
         <img
-          className="rounded-md"
+          className="rounded-md w-96"
           src={imgBanner}
           alt="imagem de mesa homeoffice"
         />
