@@ -17,8 +17,7 @@ function Works() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <section className="flex flex-col items-center gap-6 justify-evenly mx-4 mt-6 w-80 md:flex-row md:w-full lg:max-w-4xl p-4">
-        <div className="flex flex-col items-center justify-center full gap-5 mx-8 lg:max-w-4xl lg:w-screen font-regular font-bold mt-10">
+      <section className="flex flex-col items-center justify-center mt-10 m-auto md:mt-5 gap-6  w-80 md:w-full lg:max-w-4xl p-4">
           <div className="flex flex-col items-center justify-center w-full">
             <div className="w-64 mx-4 md:w-4/3 p-6">
               <img
@@ -34,7 +33,7 @@ function Works() {
               desenvolvedor web !
             </p>
           </div>
-          <section className="flex flex-col items-center gap-5 justify-evenly mx-4 w-80 lg:max-w-4xl p-4 md:w-full md:flex-row">
+          <section className="flex flex-col items-center gap-8 justify-evenly mx-4 w-80 lg:max-w-4xl md:flex-wrap lg:flex-wrap p-4 md:w-full md:flex-row">
             <a
               href="https://app-tarefa.vercel.app"
               target="_blank"
@@ -80,7 +79,7 @@ function Works() {
               className="h-52 w-80 my-4 md:w-80 rounded-lg"
             >
               <p className="border-b-4 border-b-zinc-600 mb-2">
-                Página web link para redes sociais para minha esposa.
+                Projeto paralelo midias sociais
               </p>
               <img
                 className="rounded-xl h-52 w-96"
@@ -89,7 +88,6 @@ function Works() {
               />
             </a>
           </section>
-        </div>
       </section>
     </motion.div>
   );

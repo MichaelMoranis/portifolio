@@ -27,53 +27,45 @@ function Layout() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div
-        className={`flex flex-col items-center gap-5 justify-evenly w-full md:max-w-2xl lg:max-w-4xl p-4 dark:bg-zinc-100 ${
+        className={`flex flex-col items-center justify-center min-h-screen w-full p-4 mb-4 dark:bg-zinc-100 ${
           darkMode ? "text-black" : "text-white"
         } font-regular`}
       >
-        <main className="flex flex-col items-center gap-5 justify-evenly w-full lg:max-w-4xl p-4">
-          <header
-            className={`flex items-center justify-center w-full rounded-b-2xl fixed top-0 left-0 z-10 ${
-              darkMode ? "bg-zinc-400" : "bg-zinc-700"
-            }`}
-          >
-            <div className="flex w-full justify-center gap-24 items-center p-2 backdrop-blur-2xl rounded-md">
-              <div>
-                <h1 className="font-bold text-2xl hover:underline">
-                  <Link to="/">moranesdev</Link>
-                </h1>
-              </div>
-              <ul className="gap-4  font-bold text-2xl hidden sm:flex justify-between">
-                <li className="hover:underline">posts</li>
-                <li className="hover:underline">
-                  <Link to="/works">jobs</Link>
-                </li>
-                <li className="hover:underline">sobre</li>
-              </ul>
-              <nav>
-                <ul className="flex gap-2 items-center justify-between">
-                  <li>
-                    <button onClick={toggleDisplayMode}>
-                      <img
-                        src={sunIcon}
-                        className="h-8 w-8 md:w-12 md:h-12 bg-zinc-300 rounded-full"
-                      />
-                    </button>
-                  </li>
-                  <li>
-                    <button>
-                      <img
-                        src={burguerMenu}
-                        className="h-8 w-8 md:w-12 md:h-12 bg-zinc-300 rounded-full"
-                      />
-                    </button>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </header>
+        <header
+          className={`flex items-center justify-center w-full fixed top-0 left-0 z-10 p-4 ${
+            darkMode ? "bg-zinc-400" : "bg-zinc-700"
+          } backdrop-blur-2xl`}
+        >
+          <div className="flex w-full max-w-4xl justify-between items-center">
+            <h1 className="font-bold text-2xl hover:underline">
+              <Link to="/">moranesdev</Link>
+            </h1>
+            <ul className="gap-4 font-bold text-2xl hidden sm:flex">
+              <li className="hover:underline"><Link to="/works">Projetos</Link></li>
+              <li className="hover:underline">
+                <Link to="/setup">Itens Pc</Link>
+              </li>
+              <li className="hover:underline"><Link to="/images">Fotos</Link></li>
+            </ul>
+            <nav className="flex gap-2 items-center">
+              <button onClick={toggleDisplayMode}>
+                <img
+                  src={sunIcon}
+                  className="h-8 w-8 md:w-12 md:h-12 bg-zinc-300 rounded-full"
+                />
+              </button>
+              <button>
+                <img
+                  src={burguerMenu}
+                  className="h-8 w-8 md:w-12 md:h-12 bg-zinc-300 rounded-full"
+                />
+              </button>
+            </nav>
+          </div>
+        </header>
+        <main className="flex flex-col items-center justify-center flex-grow w-full max-w-4xl mt-10">
           <motion.div
-            className="box"
+            className="w-full m-auto"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{

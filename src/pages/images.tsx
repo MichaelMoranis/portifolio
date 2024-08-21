@@ -17,7 +17,7 @@ function Images() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <section className="flex flex-col items-center gap-5 justify-evenly mx-4 w-80 mt-10 md:flex-row md:w-full lg:max-w-4xl p-4">
+      <section className="flex flex-col items-center gap-8 justify-evenly mx-auto w-80 lg:max-w-4xl md:flex-wrap lg:flex-wrap p-4 md:w-full md:flex-row mt-10">
         <div className="flex flex-col w-full gap-4">
           <h1 className="font-regular font-bold text-4xl ">
             Minha seção de imagens amadoras usando uma Canon T6 Rebel EOS!

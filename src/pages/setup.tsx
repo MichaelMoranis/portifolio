@@ -15,7 +15,7 @@ function Setup() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <section className="flex flex-col items-center gap-6 justify-evenly mt-10 w-80 md:flex-row md:w-full lg:max-w-4xl p-4">
+      <section className="flex flex-col items-center gap-8 justify-evenly mx-auto mt-10 w-80 lg:max-w-4xl md:flex-wrap lg:flex-wrap p-4 md:w-full md:flex-row">
         <div className="flex flex-col w-full gap-8">
           <h1 className="font-regular font-bold text-4xl ">
             Gosto muito de itens para mesa home office e peças para pc, esses
