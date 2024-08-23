@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Articles from "./components/Articles";
 import Banner from "./components/Banner";
 import Button from "./components/Button";
@@ -17,10 +18,10 @@ function App() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <section className="flex flex-col items-center justify-center m-auto md:mt-5 gap-6 mt-5 w-80 md:w-full lg:max-w-4xl p-4">
+      <section className="flex flex-col items-center justify-center m-auto md:mt-5 gap-6 mt-5 md:w-full lg:max-w-4xl p-4">
         <Banner />
         <Perfil />
-        <WorkText textWork="Michael é um desenvolvedor full-stack e freelancer morando em Cascavel PR. Com uma paixão para criar serviços digitais e coisas que ele deseja, em constante busca por lançamentos de produtos no mercado,  desde o planejamento e design até a solução de problemas reais com código. Quando não estou online, gosto de sair com minha câmera, ouvir musica, praticar meditação etc. Faço meu serviço como freela, entre em contato para conversarmos sobre negócios e fazer orçamentos!" />
+        <About />
         <Button />
         <div className="flex flex-col items-center content-center justify-center w-full px-4">
           {/* <Work text="Bio" /> */}
