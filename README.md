@@ -2,7 +2,7 @@
 
 Recentemente, conclui o desenvolvimento do meu portfólio usando uma combinação de tecnologias modernas, incluindo React, TypeScript, Framer Motion, React Router DOM e TailwindCSS. A experiência foi enriquecedora e me proporcionou um profundo entendimento sobre componetização, roteamento e estilização.
 
-![foto do portifolio](src/assets/image-reame.png)
+![foto do portifolio](src/assets/image-reame.jpg)
 
 ### Tecnologias Utilizadas
 
