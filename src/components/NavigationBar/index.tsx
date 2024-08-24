@@ -11,7 +11,7 @@ function NavigationBar() {
   }
 
   return (
-    <nav className="max-h-screen z-50">
+    <nav className="max-h-96 z-50">
       <button onClick={() => openNavigation()}>
         <img
           src={burguerMenu}
@@ -19,19 +19,17 @@ function NavigationBar() {
         />
       </button>
       {isOpen && (
-        <div className="absolute right-2 text-white text-xl bg-zinc-700 font-bold font-regular w-44 sm:w-60 p-4 flex flex-col items-end justify-center rounded-md z-50">
-          <ul className="space-y-4">
-            <li>
-              <Link className="hover:underline hover:bg-zinc-600 hover:text-zinc-300 rounded-full p-1" to="/works">Projetos</Link>
+          <ul className=" absolute h-48 right-2 text-white text-xl bg-purple-900 font-bold font-regular w-44 sm:w-60  flex flex-col justify-between items-end rounded-md z-50">
+            <li className="hover:underline hover:bg-zinc-600 hover:text-zinc-300 rounded-full p-2 m-2">
+              <Link to="/works">Projetos</Link>
             </li>
-            <li>
-            <Link className="hover:underline hover:bg-zinc-600 hover:text-zinc-300 rounded-full p-1" to="/images">images</Link>
+            <li className="hover:underline hover:bg-zinc-600 hover:text-zinc-300 rounded-full p-2 m-2">
+            <Link to="/images">images</Link>
             </li>
-            <li>
-            <Link className="hover:underline hover:bg-zinc-600 hover:text-zinc-300 rounded-full p-1" to="/setup">Itens Pc</Link>
+            <li className="hover:underline hover:bg-zinc-600 hover:text-zinc-300 rounded-full p-2 m-2">
+            <Link  to="/setup">Itens Pc</Link>
             </li>
           </ul>
-        </div>
       )}
     </nav>
   );
