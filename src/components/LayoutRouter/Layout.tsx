@@ -5,6 +5,7 @@ import burguerMenu from "../../assets/hambuger.png";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Banner from "../Banner";
+import NavigationBar from "../NavigationBar";
 
 function Layout() {
   const [darkMode, setDarkMode] = useState(false);
@@ -55,12 +56,7 @@ function Layout() {
                   className="h-8 w-8 md:w-12 md:h-12 bg-zinc-300 rounded-full"
                 />
               </button>
-              <button>
-                <img
-                  src={burguerMenu}
-                  className="h-8 w-8 md:w-12 md:h-12 bg-zinc-300 rounded-full"
-                />
-              </button>
+              <NavigationBar />
             </nav>
           </div>
         </header>
