@@ -52,7 +52,7 @@ function Layout() {
               <button onClick={toggleDisplayMode}>
                 <img
                   src={sunIcon}
-                  className="h-8 w-8 md:w-12 md:h-12 bg-zinc-300 rounded-full"
+                  className="h-8 w-8 md:w-12 md:h-12 rounded-full"
                 />
               </button>
               <NavigationBar />

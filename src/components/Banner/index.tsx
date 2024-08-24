@@ -3,7 +3,7 @@ import Bar from "../Bar";
 
 function Banner() {
   return (
-    <div className="flex flex-col items-center content-center justify-between md:mt-10 md:w-full lg:w-full">
+    <div className="flex flex-col items-center content-center justify-between mt-10 md:mt-10 md:w-full lg:w-full">
       <div className="w-fullj pb-4">
         <img
           className="rounded-md w-96"
