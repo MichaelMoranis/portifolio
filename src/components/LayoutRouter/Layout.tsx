@@ -1,7 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../Footer";
 import sunIcon from "../../assets/sun.png";
-import burguerMenu from "../../assets/hambuger.png";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Banner from "../Banner";
