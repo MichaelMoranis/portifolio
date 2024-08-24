@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div className="font-regular font-bold w-full md:w-2/3">
+    <div className="font-regular flex items-center justify-center font-bold w-full md:w-2/3">
         Michael é um desenvolvedor full-stack e freelancer morando em Cascavel
         PR. Com uma paixão para criar serviços digitais e coisas que ele deseja,
         em constante busca por lançamentos de produtos no mercado, desde o

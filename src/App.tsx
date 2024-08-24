@@ -1,6 +1,5 @@
 import About from "./components/About";
 import Articles from "./components/Articles";
-import Banner from "./components/Banner";
 import Button from "./components/Button";
 import Perfil from "./components/Perfil";
 import WorkText from "./components/WorkText";
@@ -19,7 +18,6 @@ function App() {
       }}
     >
       <section className="flex flex-col items-center justify-center m-auto md:mt-5 gap-6 mt-5 md:w-full lg:max-w-4xl p-4">
-        <Banner />
         <Perfil />
         <About />
         <Button />

@@ -4,6 +4,7 @@ import sunIcon from "../../assets/sun.png";
 import burguerMenu from "../../assets/hambuger.png";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Banner from "../Banner";
 
 function Layout() {
   const [darkMode, setDarkMode] = useState(false);
@@ -64,6 +65,7 @@ function Layout() {
           </div>
         </header>
         <main className="flex flex-col items-center justify-center flex-grow w-full max-w-4xl mt-10">
+        <Banner />
           <motion.div
             className="w-full m-auto"
             initial={{ opacity: 0, scale: 0.5 }}
