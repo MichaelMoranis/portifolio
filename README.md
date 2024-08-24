@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+## Desenvolvimento do Meu Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Recentemente, conclui o desenvolvimento do meu portfólio usando uma combinação de tecnologias modernas, incluindo React, TypeScript, Framer Motion, React Router DOM e TailwindCSS. A experiência foi enriquecedora e me proporcionou um profundo entendimento sobre componetização, roteamento e estilização.
 
-Currently, two official plugins are available:
+![foto do portifolio](src/assets/image-reame.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+**React e TypeScript**: A base do meu portfólio é construída com React e TypeScript. O React permite a criação de componentes reutilizáveis e a construção de uma interface de usuário interativa e dinâmica. O TypeScript, por sua vez, trouxe robustez ao projeto, oferecendo um sistema de tipos que ajuda a prevenir erros e melhora a manutenção do código.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Framer Motion**: Para adicionar animações e transições fluidas, utilizei o Framer Motion. Esta biblioteca facilitou a implementação de efeitos visuais que melhoraram a experiência do usuário, tornando a navegação mais envolvente e atraente.
 
-- Configure the top-level `parserOptions` property like this:
+**React Router DOM**: O roteamento foi gerenciado pelo React Router DOM. Essa ferramenta possibilitou a criação de uma navegação eficiente entre as páginas do portfólio, permitindo uma experiência de usuário intuitiva e bem estruturada.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+**TailwindCSS**: A estilização do portfólio foi feita com TailwindCSS, uma framework de CSS utilitário. O TailwindCSS não só acelerou o processo de desenvolvimento com suas classes de utilitários, mas também me proporcionou uma maneira eficiente e flexível de criar layouts responsivos e estilizados.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Aprendizado e Implementações
+
+**Componetização**: Durante o desenvolvimento, aprendi a importância da componetização no React. Dividir a aplicação em componentes menores e reutilizáveis não apenas facilitou o gerenciamento do código, mas também tornou o projeto mais modular e fácil de manter. Cada componente, como o `Header`, `Banner`, e `Perfil`, foi projetado para encapsular uma funcionalidade específica, contribuindo para um código mais limpo e organizado.
+
+**Roteamento**: Implementar o roteamento com o React Router DOM foi um passo crucial. A configuração das rotas permitiu que eu criasse uma navegação fluida entre as diferentes seções do meu portfólio, melhorando a experiência do usuário e facilitando a estruturação do conteúdo.
+
+**Estilização com TailwindCSS**: A estilização foi um dos aspectos mais satisfatórios do projeto. O TailwindCSS, com sua abordagem de utilitários, permitiu criar designs responsivos e personalizados de forma ágil. Além disso, aprendi a aplicar gradientes suaves e harmoniosos, alinhados com minha preferência por uma estética mais coesa.
+
+### Conclusão
+
+Desenvolver meu portfólio foi uma experiência valiosa que consolidou meu conhecimento em React, TypeScript, animações com Framer Motion, roteamento com React Router DOM e estilização com TailwindCSS. Cada tecnologia contribuiu de forma significativa para a criação de um portfólio visualmente atraente e funcional, refletindo minhas habilidades e aprendizado ao longo da jornada de desenvolvimento.
