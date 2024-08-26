@@ -25,18 +25,7 @@ function App() {
         <Button />
         <div className="flex flex-col items-center content-center justify-center w-full px-4">
           {/* <Work text="Bio" /> */}
-          <WorkText
-            yearStudent="1996"
-            textWork="ano de nascimento em Barreiras BA."
-          />
-          <WorkText
-            yearStudent="2019"
-            textWork="Mudo para a cidade de Cascavel PR onde me interesso por programação em 2021 durante a pandemia!."
-          />
-          <WorkText
-            textWork="Inicio da faculdade em análise e desenvolvimento de sistemas."
-            yearStudent="2024"
-          />
+          <WorkText />
         </div>
         <Articles />
       </section>
