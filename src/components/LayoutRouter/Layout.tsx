@@ -32,15 +32,15 @@ function Layout() {
         } font-regular`}
       >
         <header
-          className={`flex items-center justify-center w-full fixed top-0 left-0 z-10 p-4 ${
+          className={`flex items-center justify-center w-full fixed top-0 left-0 z-10 p-2 ${
             darkMode ? "bg-zinc-400" : "bg-zinc-700"
           } backdrop-blur-2xl`}
         >
-          <div className="flex w-full max-w-4xl justify-between">
+          <div className="flex items-center w-full max-w-4xl justify-between">
             <h1 className="font-bold text-2xl hover:underline">
               <Link to="/">moranesdev</Link>
             </h1>
-            <ul className="gap-4 font-bold text-2xl hidden sm:flex">
+            <ul className="gap-4 font-bold text-2xl items-center hidden sm:flex">
               <li className="hover:underline"><Link to="/works">Projetos</Link></li>
               <li className="hover:underline">
                 <Link to="/setup">Itens Pc</Link>
