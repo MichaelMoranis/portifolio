@@ -8,6 +8,7 @@ function Banner() {
         <img
           className="rounded-md w-96"
           src={imgBanner}
+          loading="lazy" height="300px" width="300px"
           alt="imagem de mesa homeoffice"
         />
       </div>

@@ -35,6 +35,7 @@ function Images() {
           <img
             className="rounded-xl h-52 w-96"
             src={street}
+            loading="lazy" height="300px" width="300px"
             alt="aplicacao lista de tarefas"
           />
         </div>
@@ -45,6 +46,7 @@ function Images() {
           <img
             className="rounded-xl h-52 w-96"
             src={formig}
+            loading="lazy" height="300px" width="300px"
             alt="aplicacao lista de tarefas"
           />
         </div>
@@ -55,6 +57,7 @@ function Images() {
           <img
             className="rounded-xl h-52 w-96"
             src={womam}
+            loading="lazy" height="300px" width="300px"
             alt="aplicacao lista de tarefas"
           />
         </div>
@@ -65,6 +68,7 @@ function Images() {
           <img
             className="rounded-xl h-52 w-96"
             src={forest}
+            loading="lazy" height="300px" width="300px"
             alt="aplicacao lista de tarefas"
           />
         </div>
@@ -75,6 +79,7 @@ function Images() {
           <img
             className="rounded-xl h-52 w-96"
             src={tableHome}
+            loading="lazy" height="300px" width="300px"
             alt="mesa de trabalho"
           />
         </div>

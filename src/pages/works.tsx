@@ -32,6 +32,7 @@ function Works() {
             <img
               className="rounded-xl h-52 w-80"
               src={imagelist}
+              loading="lazy" height="300px" width="300px"
               alt="aplicacao lista de tarefas"
             />
           </a>
@@ -45,6 +46,7 @@ function Works() {
             <img
               className="rounded-xl h-52 w-96"
               src={orcamentos}
+              loading="lazy" height="300px" width="300px"
               alt="mesa de trabalho"
             />
           </a>
@@ -58,6 +60,7 @@ function Works() {
             <img
               className="rounded-xl h-52 w-96"
               src={linkmichael}
+              loading="lazy" height="300px" width="300px"
               alt="mesa de trabalho"
             />
           </a>
@@ -71,6 +74,7 @@ function Works() {
             <img
               className="rounded-xl h-52 w-96"
               src={jogosLoterias}
+              loading="lazy" height="300px" width="300px"
               alt="mesa de trabalho"
             />
           </a>
@@ -84,6 +88,7 @@ function Works() {
             <img
               className="rounded-xl h-52 w-96"
               src={linkmiss}
+              loading="lazy" height="300px" width="300px"
               alt="mesa de trabalho"
             />
           </a>

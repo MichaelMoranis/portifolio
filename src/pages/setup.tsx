@@ -32,6 +32,7 @@ function Setup() {
           <img
             className="rounded-xl h-52 w-96"
             src={kumara}
+            loading="lazy" height="300px" width="300px"
             alt="aplicacao lista de tarefas"
           />
         </div>
@@ -42,6 +43,7 @@ function Setup() {
           <img
             className="rounded-xl h-52 w-96"
             src={keyboard}
+            loading="lazy" height="300px" width="300px"
             alt="aplicacao lista de tarefas"
           />
         </div>
@@ -50,6 +52,7 @@ function Setup() {
           <img
             className="rounded-xl h-52 w-96"
             src={mouse}
+            loading="lazy" height="300px" width="300px"
             alt="aplicacao lista de tarefas"
           />
         </div>
