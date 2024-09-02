@@ -27,12 +27,12 @@ function Layout() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div
-        className={`flex flex-col items-center justify-center min-h-screen w-full p-4 mb-4 dark:bg-zinc-100 ${
-          darkMode ? "text-black" : "text-white"
+        className={`flex flex-col items-center justify-center min-h-screen w-full p-4 mb-4 ${
+          darkMode ? "dark:bg-zinc-100 text-black" : "text-white"
         } font-regular`}
       >
         <header
-          className={`flex items-center justify-center w-full fixed top-0 left-0 z-10 p-2 ${
+          className={`flex items-center justify-center w-full fixed top-0 left-0 z-20 p-2 ${
             darkMode ? "bg-zinc-400" : "bg-zinc-700"
           } backdrop-blur-2xl`}
         >
@@ -41,24 +41,31 @@ function Layout() {
               <Link to="/">moranesdev</Link>
             </h1>
             <ul className="gap-4 font-bold text-2xl items-center hidden sm:flex">
-              <li className="hover:underline"><Link to="/works">Projetos</Link></li>
+              <li className="hover:underline">
+                <Link to="/works">Projetos</Link>
+              </li>
               <li className="hover:underline">
                 <Link to="/setup">Itens Pc</Link>
               </li>
-              <li className="hover:underline"><Link to="/images">Fotos</Link></li>
+              <li className="hover:underline">
+                <Link to="/images">Fotos</Link>
+              </li>
             </ul>
-            <nav className="flex justify-center gap-2 items-center">
-              <button onClick={toggleDisplayMode}>
+            <nav className="flex justify-center gap-2 items-center relative z-30">
+              <button
+                onClick={toggleDisplayMode}
+                className="relative z-30"
+              >
                 <img
                   src={sunIcon}
-                  className="h-8 w-8 md:w-12 md:h-12 rounded-full"
+                  className="h-8 w-8 sm:h-10 sm:w-10 md:w-12 md:h-12 rounded-full"
                 />
               </button>
               <NavigationBar />
             </nav>
           </div>
         </header>
-        <main className="flex flex-col items-center justify-center flex-grow w-full max-w-4xl mt-10">
+        <main className="flex flex-col items-center justify-center flex-grow w-full max-w-4xl mt-16 sm:mt-10">
           <motion.div
             className="w-full m-auto"
             initial={{ opacity: 0, scale: 0.5 }}
