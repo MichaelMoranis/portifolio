@@ -38,7 +38,7 @@ function Layout() {
         >
           <div className="flex items-center w-full max-w-4xl justify-between">
             <h1 className="font-bold text-2xl hover:underline">
-              <Link to="/">moranesdev</Link>
+              <Link to="/">moranisdev</Link>
             </h1>
             <ul className="gap-4 font-bold text-2xl items-center hidden sm:flex">
               <li className="hover:underline">
@@ -55,6 +55,7 @@ function Layout() {
               <button
                 onClick={toggleDisplayMode}
                 className="relative z-30"
+                id="mode"
               >
                 <img
                   src={sunIcon}

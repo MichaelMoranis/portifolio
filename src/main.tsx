@@ -1,48 +1,47 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import ErrorPage from './error-page.tsx'
-import NewPage from './pages/newPage.tsx'
-import Layout from './components/LayoutRouter/Layout.tsx'
-import Works from './pages/works.tsx'
-import Images from './pages/images.tsx'
-import Setup from './pages/setup.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./error-page.tsx";
+import NewPage from "./pages/newPage.tsx";
+import Layout from "./components/LayoutRouter/Layout.tsx";
+import Works from "./pages/works.tsx";
+import Images from "./pages/images.tsx";
+import Setup from "./pages/setup.tsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />, // Usando o Layout como elemento principal
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <App />,
       },
       {
-        path: 'newpage',
+        path: "newpage",
         element: <NewPage />,
       },
       {
-        path: 'works',
+        path: "works",
         element: <Works />,
       },
       {
-        path: 'images',
+        path: "images",
         element: <Images />,
       },
       {
-        path: 'setup',
+        path: "setup",
         element: <Setup />,
       },
     ],
   },
 ]);
 
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

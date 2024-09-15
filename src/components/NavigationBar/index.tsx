@@ -44,6 +44,7 @@ function NavigationBar() {
       {isOpen ? (
         <>
           <ul
+            id="list"
             ref={ref}
             className="absolute right-0 top-10 w-60 md:left-auto md:right-0 md:w-80 text-white text-xl bg-purple-900 font-bold flex flex-col justify-end rounded-xl z-40 p-4 border-2 gap-4"
           >
@@ -92,11 +93,12 @@ function NavigationBar() {
           </button>
         </>
       ) : (
-        <button onClick={toggleNavigation} className="z-50">
+        <button  onClick={toggleNavigation} className="z-50">
         <img
           src={burguerMenu}
           className="h-8 w-8 md:w-12 md:h-12 rounded-full"
           alt="Menu"
+          id="burguer"
         />
       </button>
       )}

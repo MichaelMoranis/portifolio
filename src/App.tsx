@@ -7,7 +7,7 @@ import WorkText from "./components/WorkText";
 import { motion } from "framer-motion";
 
 function App() {
-  return (
+ return (
     <motion.div
       className="box flex justify-center items-center m-auto w-full"
       initial={{ opacity: 0, scale: 0.5 }}
@@ -24,7 +24,6 @@ function App() {
         <About />
         <Button />
         <div className="flex flex-col items-center content-center justify-center w-full px-4">
-          {/* <Work text="Bio" /> */}
           <WorkText />
         </div>
         <Articles />
