@@ -22,6 +22,9 @@ Recentemente, conclui o desenvolvimento do meu portfólio usando uma combinaçã
 
 **Estilização com TailwindCSS**: A estilização foi um dos aspectos mais satisfatórios do projeto. O TailwindCSS, com sua abordagem de utilitários, permitiu criar designs responsivos e personalizados de forma ágil. Além disso, aprendi a aplicar gradientes suaves e harmoniosos, alinhados com minha preferência por uma estética mais coesa.
 
+**Testes com e2e com Cypress.
+O Cypress é uma ferramenta de teste end-to-end (E2E) moderna, focada em testes automatizados para aplicações web. Ele permite que você escreva testes para interagir com o DOM, verificar comportamentos e garantir que a aplicação funcione conforme o esperado.
+
 ### Conclusão
 
 Desenvolver meu portfólio foi uma experiência valiosa que consolidou meu conhecimento em React, TypeScript, animações com Framer Motion, roteamento com React Router DOM e estilização com TailwindCSS. Cada tecnologia contribuiu de forma significativa para a criação de um portfólio visualmente atraente e funcional, refletindo minhas habilidades e aprendizado ao longo da jornada de desenvolvimento.
