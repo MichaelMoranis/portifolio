@@ -3,10 +3,12 @@ import projects from "../../assets/project.png";
 import images from "../../assets/images.jpeg";
 import pc from "../../assets/computer.png";
 
+type NavigationsProps = {
+  onClose: () => void,
+  sidebarOpen: boolean
+}
 
-
-function NavigationBar() {
-
+function NavigationBar({onClose, sidebarOpen}: NavigationsProps) {
   return (
     <nav className="relative flex z-50">
           <ul
@@ -48,6 +50,12 @@ function NavigationBar() {
                 />
               </Link>
             </li>
+            {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-30"
+          onClick={onClose}
+        />
+      )}
           </ul>
     </nav>
   );

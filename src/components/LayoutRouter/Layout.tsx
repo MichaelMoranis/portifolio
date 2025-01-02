@@ -26,7 +26,7 @@ function Layout() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <Header sidebarOpen={sidebarOpen} onMenuClick={toggleSideBar} darkMode={darkMode} setDarkMode={setDarkMode} />
-      {sidebarOpen && <NavigationBar />}
+      {sidebarOpen && <NavigationBar onClose={toggleSideBar} sidebarOpen={sidebarOpen} />}
       <div
         className={`flex flex-col items-center justify-center min-h-screen w-full p-4 mb-4 ${
           darkMode ? "dark:bg-zinc-100 text-black" : "text-white"

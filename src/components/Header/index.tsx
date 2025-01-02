@@ -1,4 +1,5 @@
 import sunIcon from "../../assets/sun.png";
+import moon from "../../assets/moon-2.png";
 import { Link } from "react-router-dom";
 import burguerMenu from "../../assets/hambuger.png"
 import closeMenu from "../../assets/close.png";
@@ -11,9 +12,7 @@ type HeaderProps = {
     setDarkMode: Dispatch<SetStateAction<boolean>>
 };
 
-
 export default function Header({ sidebarOpen, onMenuClick, darkMode, setDarkMode }: HeaderProps) {
-
     function toggleDisplayMode() {
         const newMode = !darkMode ? "dark" : "light";
         setDarkMode(!darkMode);
@@ -25,7 +24,7 @@ export default function Header({ sidebarOpen, onMenuClick, darkMode, setDarkMode
             className={`flex items-center justify-center w-full fixed top-0 left-0 z-20 p-2 ${darkMode ? "bg-zinc-400" : "bg-zinc-700"
                 } backdrop-blur-2xl`}
         >
-            <div className="flex items-center w-full max-w-4xl justify-between">
+            <div className={`flex items-center w-full max-w-4xl justify-between ${darkMode ? "text-black" : "text-white"}`}>
                 <h1 className="font-bold text-2xl hover:underline">
                     <Link to="/">moranisdev</Link>
                 </h1>
@@ -47,17 +46,19 @@ export default function Header({ sidebarOpen, onMenuClick, darkMode, setDarkMode
                         id="mode"
                     >
                         <img
-                            src={sunIcon}
+                            src={darkMode ? moon : sunIcon}
                             className="h-8 w-8 sm:h-10 sm:w-10 md:w-12 md:h-12 rounded-full"
                         />
                     </button>
-                    <img
-                        src={sidebarOpen ? closeMenu : burguerMenu}
-                        onClick={onMenuClick}
-                        className="h-8 w-8 md:w-12 md:h-12 rounded-full"
-                        alt="Menu"
-                        id="burguer"
-                    />
+                    <div>
+                        <img
+                            src={sidebarOpen ? closeMenu : burguerMenu}
+                            onClick={onMenuClick}
+                            className="h-8 w-8 md:w-12 md:h-12 rounded-full"
+                            alt="Menu"
+                            id="burguer"
+                        />
+                    </div>
                 </nav>
             </div>
         </header>
