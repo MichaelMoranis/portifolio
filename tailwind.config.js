@@ -8,7 +8,10 @@ export default {
     extend: {
       fontFamily: {
       regular: ["Poppins", "sans serif"]
-      }
+      },
+      screens: {
+        'sm-custom': '528px', // Criando um breakpoint chamado "sm-custom"
+      },
     },
   },
   plugins: [],

@@ -1,64 +1,63 @@
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import projects from "../../assets/project.png";
 import images from "../../assets/images.jpeg";
 import pc from "../../assets/computer.png";
+import insta from "../../assets/instagram-.png";
+import github from "../../assets/github.png";
+import linkedin from "../../assets/linkedin.png";
+import { SocialIcon } from "./SocialItem";
+import { NavItem } from "./naveItem";
 
-type NavigationsProps = {
-  onClose: () => void,
-  sidebarOpen: boolean
-}
+type NavigationBarProps = {
+  onClose: () => void;
+  sidebarOpen: boolean;
+};
 
-function NavigationBar({onClose, sidebarOpen}: NavigationsProps) {
+function NavigationBar({ onClose, sidebarOpen }: NavigationBarProps) {
   return (
-    <nav className="relative flex z-50">
-          <ul
-            id="list"
-            className="absolute right-0 top-10 w-60 md:left-auto md:right-0 md:w-80 text-white text-xl bg-purple-900 font-bold flex flex-col justify-end rounded-xl z-40 p-4 border-2 gap-4"
-          >
-            <li className="hover:underline border-2 hover:text-zinc-300 rounded-full p-1">
-              <Link
-                to="/works"
-                className="flex items-center justify-around gap-4"
-              >
-                Projetos
-                <img
-                  className="w-8 h-8"
-                  src={projects}
-                  alt="icones de projetos"
-                />
-              </Link>
-            </li>
-            <li className="hover:underline border-2 hover:text-zinc-300 rounded-full p-1">
-              <Link
-                to="/setup"
-                className="flex items-center justify-around gap-4"
-              >
-                Itens Pc
-                <img className="w-8 h-8" src={pc} alt="icones de projetos" />
-              </Link>
-            </li>
-            <li className="hover:underline border-2 hover:text-zinc-300 rounded-full p-1">
-              <Link
-                to="/images"
-                className="flex items-center justify-around gap-4"
-              >
-                Imagens
-                <img
-                  className="w-8 h-8"
-                  src={images}
-                  alt="icones de projetos"
-                />
-              </Link>
-            </li>
-            {sidebarOpen && (
+    <>
+      {/* Backdrop (Fecha o menu ao clicar fora) */}
+      {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-30"
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40"
           onClick={onClose}
         />
       )}
-          </ul>
-    </nav>
+
+      {/* Sidebar */}
+      <motion.nav
+        initial={{ x: "100%" }}
+        animate={{ x: sidebarOpen ? 0 : "100%" }}
+        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+        className="fixed top-0 right-0 h-full w-64 bg-zinc-900 text-white shadow-lg z-50 flex flex-col"
+      >
+        {/* Botão de Fechar */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-white hover:text-zinc-400 transition"
+        >
+          X
+        </button>
+
+        {/* Links */}
+        <ul className="mt-8 space-y-4 p-6">
+          <NavItem to="/works" label="Projetos" icon={projects} />
+          <NavItem to="/setup" label="Itens PC" icon={pc} />
+          <NavItem to="/images" label="Minhas Imagens" icon={images} />
+        </ul>
+
+        {/* Ícones sociais */}
+        <div className="mt-auto flex justify-center gap-4 pb-6">
+          <SocialIcon link="https://instagram.com" icon={insta} alt="Instagram" />
+          <SocialIcon link="https://github.com" icon={github} alt="GitHub" />
+          <SocialIcon link="https://linkedin.com" icon={linkedin} alt="LinkedIn" />
+        </div>
+      </motion.nav>
+    </>
   );
 }
+
+
+// Componente para os ícones sociais
 
 export default NavigationBar;

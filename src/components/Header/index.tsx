@@ -54,7 +54,7 @@ export default function Header({ sidebarOpen, onMenuClick, darkMode, setDarkMode
                         <img
                             src={sidebarOpen ? closeMenu : burguerMenu}
                             onClick={onMenuClick}
-                            className="h-8 w-8 md:w-12 md:h-12 rounded-full"
+                            className="[@media(min-width:640px)]:hidden h-8 w-8 md:w-12 md:h-12 rounded-full"
                             alt="Menu"
                             id="burguer"
                         />

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function Setup() {
   return (
     <motion.div
-      className="box"
+      className="box p-0"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -15,9 +15,9 @@ function Setup() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <section className="flex flex-col items-center gap-8 justify-evenly mx-auto mt-10 w-80 lg:max-w-4xl md:flex-wrap lg:flex-wrap p-4 md:w-full md:flex-row">
-        <div className="flex flex-col w-full gap-8">
-          <h1 className="font-regular font-bold text-4xl ">
+      <section className="flex flex-col items-center gap-8 justify-evenly mt-5 w-80 lg:max-w-4xl md:flex-wrap lg:flex-wrap p-2 md:w-full md:flex-row">
+        <div className="flex flex-col w-full gap-4">
+          <h1 className="font-regular font-bold text-2xl ">
             Gosto muito de itens para mesa home office e peças para pc, esses
             são alguns que uso diariamente !
           </h1>
@@ -25,7 +25,7 @@ function Setup() {
             Meus itens usados na minha mesa para estudo e trabalho !
           </h3>
         </div>
-        <div className="h-52 w-80 my-4 md:w-80 rounded-lg">
+        <div className="h-52 w-80 md:w-80 rounded-lg">
           <p className=" border-b-4 border-b-zinc-600 mb-2">
             Teclado Kumara Redragon TKL mecanico.
           </p>
