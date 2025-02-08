@@ -5,8 +5,8 @@ import pc from "../../assets/computer.png";
 import insta from "../../assets/instagram-.png";
 import github from "../../assets/github.png";
 import linkedin from "../../assets/linkedin.png";
-import { SocialIcon } from "./SocialItem";
-import { NavItem } from "./naveItem";
+import { SocialIcon } from "./SocialIcon";
+import { NavItem } from "./NavItem";
 
 type NavigationBarProps = {
   onClose: () => void;
@@ -29,7 +29,7 @@ function NavigationBar({ onClose, sidebarOpen }: NavigationBarProps) {
         initial={{ x: "100%" }}
         animate={{ x: sidebarOpen ? 0 : "100%" }}
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
-        className="fixed top-0 right-0 h-full w-64 bg-zinc-900 text-white shadow-lg z-50 flex flex-col"
+        className="fixed top-0 right-0 h-full w-64 bg-zinc-900 text-white  z-50 flex flex-col"
       >
         {/* Botão de Fechar */}
         <button
@@ -47,7 +47,7 @@ function NavigationBar({ onClose, sidebarOpen }: NavigationBarProps) {
         </ul>
 
         {/* Ícones sociais */}
-        <div className="mt-auto flex justify-center gap-4 pb-6">
+        <div className=" flex justify-center gap-4 pb-6 mt-auto">
           <SocialIcon link="https://instagram.com" icon={insta} alt="Instagram" />
           <SocialIcon link="https://github.com" icon={github} alt="GitHub" />
           <SocialIcon link="https://linkedin.com" icon={linkedin} alt="LinkedIn" />
