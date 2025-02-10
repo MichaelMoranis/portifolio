@@ -42,23 +42,50 @@ function NavigationBar({ onClose, sidebarOpen }: NavigationBarProps) {
 
         {/* Links */}
         <ul className="mt-8 space-y-4 p-6">
-          <NavItem to="/works" label="Projetos" icon={projects} />
-          <NavItem to="/setup" label="Itens PC" icon={pc} />
-          <NavItem to="/images" label="Minhas Imagens" icon={images} />
-          <NavItem to="https://www.youtube.com/@moraniss/videos" label="Youtube" icon={youtube} />
+          <NavItem
+            to="/works"
+            label="Projetos"
+            icon={projects}
+            onClose={onClose}
+          />
+          <NavItem 
+          to="/setup" 
+          label="Itens PC" 
+          icon={pc}
+          onClose={onClose}
+          />
+          <NavItem 
+          to="/images" 
+          label="Minhas Imagens" 
+          icon={images}
+          onClose={onClose}
+          />
+          <NavItem
+            to="https://www.youtube.com/@moraniss/videos"
+            label="Youtube"
+            icon={youtube}
+            onClose={onClose}
+          />
         </ul>
 
         {/* Ícones sociais */}
         <div className=" flex justify-center gap-4 pb-6 mt-auto">
-          <SocialIcon link="https://instagram.com" icon={insta} alt="Instagram" />
+          <SocialIcon
+            link="https://instagram.com"
+            icon={insta}
+            alt="Instagram"
+          />
           <SocialIcon link="https://github.com" icon={github} alt="GitHub" />
-          <SocialIcon link="https://linkedin.com" icon={linkedin} alt="LinkedIn" />
+          <SocialIcon
+            link="https://linkedin.com"
+            icon={linkedin}
+            alt="LinkedIn"
+          />
         </div>
       </motion.nav>
     </>
   );
 }
-
 
 // Componente para os ícones sociais
 
