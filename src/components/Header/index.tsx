@@ -21,19 +21,22 @@ export default function Header({ sidebarOpen, onMenuClick, darkMode, setDarkMode
 
     return (
         <header
-            className={`flex items-center justify-center w-full fixed top-0 left-0 z-20 p-2 ${darkMode ? "bg-zinc-400" : "bg-zinc-700"
+            className={`flex items-center justify-center w-full max-w-[900px] mx-auto left-1/2 -translate-x-1/2 fixed top-0 z-20 p-2 ${darkMode ? "bg-zinc-400" : "bg--700"
                 } backdrop-blur-2xl`}
         >
             <div className={`flex items-center w-full max-w-4xl justify-between ${darkMode ? "text-black" : "text-white"}`}>
                 <h1 className="font-bold text-2xl hover:underline">
                     <Link to="/">moranisdev</Link>
                 </h1>
-                <ul className="gap-4 font-bold text-2xl items-center hidden sm:flex">
+                <ul className="gap-4 font-bold text-2xl items-center flex [@media(max-width:770px)]:hidden">
                     <li className="hover:underline">
                         <Link to="/works">Projetos</Link>
                     </li>
                     <li className="hover:underline">
-                        <Link to="/setup">Itens Pc</Link>
+                        <Link to="https://www.youtube.com/@moraniss/videos">Youtube</Link>
+                    </li>
+                    <li className="hover:underline">
+                        <Link to="/setup">Imagens</Link>
                     </li>
                     <li className="hover:underline">
                         <Link to="/images">Fotos</Link>
@@ -54,7 +57,7 @@ export default function Header({ sidebarOpen, onMenuClick, darkMode, setDarkMode
                         <img
                             src={sidebarOpen ? closeMenu : burguerMenu}
                             onClick={onMenuClick}
-                            className="[@media(min-width:640px)]:hidden h-8 w-8 md:w-12 md:h-12 rounded-full"
+                            className="[@media(min-width:770px)]:hidden h-8 w-8 md:w-12 md:h-12 rounded-full"
                             alt="Menu"
                             id="burguer"
                         />

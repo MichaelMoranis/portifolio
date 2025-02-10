@@ -34,12 +34,12 @@ function Layout() {
 
       {/* Conteúdo principal responsivo */}
       <div
-        className={`flex flex-col items-center justify-center min-h-screen w-full px-4 ${
+        className={`flex flex-col items-center justify-center min-h-screen w-full px-4 gap-12 ${
           darkMode ? "dark:bg-zinc-100 text-black" : "text-white"
         } font-regular`}
       >
         <motion.div
-          className="flex justify-center items-center w-full max-w-screen-xl mt-12"
+          className="flex justify-center items-center w-full max-w-screen-xl mt-12 gap-12"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{

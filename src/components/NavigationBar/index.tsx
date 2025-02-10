@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import projects from "../../assets/project.png";
+import youtube from "../../assets/youtube.png";
 import images from "../../assets/images.jpeg";
 import pc from "../../assets/computer.png";
 import insta from "../../assets/instagram-.png";
@@ -44,6 +45,7 @@ function NavigationBar({ onClose, sidebarOpen }: NavigationBarProps) {
           <NavItem to="/works" label="Projetos" icon={projects} />
           <NavItem to="/setup" label="Itens PC" icon={pc} />
           <NavItem to="/images" label="Minhas Imagens" icon={images} />
+          <NavItem to="https://www.youtube.com/@moraniss/videos" label="Youtube" icon={youtube} />
         </ul>
 
         {/* Ícones sociais */}
