@@ -1,6 +1,5 @@
 import imgBanner from "../../assets/developer.png";
 import Bar from "../Bar";
-import WalkingCat from "../BinklingCat";
 
 function Banner() {
   return (
@@ -14,7 +13,6 @@ function Banner() {
           width="300px"
           alt="imagem de mesa homeoffice"
         />
-        <WalkingCat />
       </div>
       <Bar text="Sou dev frontend em Cascavel PR" />
     </div>
