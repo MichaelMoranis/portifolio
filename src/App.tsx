@@ -1,7 +1,6 @@
 import About from "./components/About";
 import Articles from "./components/Articles";
 import Banner from "./components/Banner";
-import WalkingCat from "./components/BinklingCat";
 import Button from "./components/Button";
 import Perfil from "./components/Perfil";
 import WorkText from "./components/WorkText";
