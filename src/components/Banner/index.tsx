@@ -1,9 +1,9 @@
-import imgBanner from "../../assets/office.jpeg";
+import imgBanner from "../../assets/developer.png";
 import Bar from "../Bar";
 
 function Banner() {
   return (
-    <div className="flex flex-col items-center content-center md:mt-10 md:w-full lg:w-full">
+    <div className="flex flex-col items-center content-center md:w-full lg:w-full gap-8">
       <div className="flex items-center pb-4">
         <img
           className="rounded-md w-96 md:w-full md:h-96 "
