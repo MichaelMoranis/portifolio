@@ -21,7 +21,13 @@ function App() {
       <section className="flex flex-col items-center justify-center m-auto md:mt-5 gap-6 mt-5 md:w-full lg:max-w-4xl p-4">
         <Banner />
         <Perfil />
-        <About />
+        <About text="Michael é um desenvolvedor full-stack e freelancer morando em Cascavel
+        PR. Com uma paixão para criar serviços digitais e coisas que ele deseja,
+        em constante busca por lançamentos de produtos no mercado, desde o
+        planejamento e design até a solução de problemas reais com código.<br />
+        Quando não estou online, gosto de sair com minha câmera, ouvir musica,
+        praticar meditação etc. Faço meu serviço como freela, entre em contato
+        para conversarmos sobre negócios e fazer orçamentos!" />
         <Button />
         <div className="flex flex-col items-center content-center justify-center w-full px-4">
           <WorkText />
