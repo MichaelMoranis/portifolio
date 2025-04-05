@@ -8,7 +8,7 @@ import NewPage from "./pages/newPage.tsx";
 import Layout from "./components/LayoutRouter/Layout.tsx";
 import Works from "./pages/works.tsx";
 import Images from "./pages/images.tsx";
-import Setup from "./pages/setup.tsx";
+import Articles from "./pages/articles.tsx";
 
 const router = createBrowserRouter([
   {
@@ -33,8 +33,8 @@ const router = createBrowserRouter([
         element: <Images />,
       },
       {
-        path: "setup",
-        element: <Setup />,
+        path: "articles",
+        element: <Articles />,
       },
     ],
   },

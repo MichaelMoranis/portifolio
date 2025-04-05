@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import projects from "../../assets/project.png";
 import youtube from "../../assets/youtube.png";
-import images from "../../assets/images.jpeg";
+import images from "../../assets/images.png";
 import pc from "../../assets/computer.png";
 import insta from "../../assets/instagram-.png";
 import github from "../../assets/github.png";
@@ -49,8 +49,8 @@ function NavigationBar({ onClose, sidebarOpen }: NavigationBarProps) {
             onClose={onClose}
           />
           <NavItem 
-          to="/setup" 
-          label="Itens PC" 
+          to="/articles" 
+          label="Artigos" 
           icon={pc}
           onClose={onClose}
           />

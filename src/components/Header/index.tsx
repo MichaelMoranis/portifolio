@@ -61,12 +61,12 @@ export default function Header({
           </li>
           <li className="hover:underline">
             <Link
-              to="/setup"
+              to="/articles"
               className={
                 darkMode ? "text-black hover:text-zinc-100" : "text-white"
               }
             >
-              Imagens
+              Artigos
             </Link>
           </li>
           <li className="hover:underline">

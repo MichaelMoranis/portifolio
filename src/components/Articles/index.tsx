@@ -10,9 +10,9 @@ function Articles() {
                 <p className=" border-b-4 border-b-zinc-600 mb-2">Veja minhas fotos e imagens.</p>
                 <img className='rounded-xl h-52 w-96' src={image} alt="aplicacao lista de tarefas" />
             </Link>
-            <Link to="/setup" className="h-52 w-80 my-4 md:w-80 rounded-lg">
+            <Link to="/articles" className="h-52 w-80 my-4 md:w-80 rounded-lg">
                 <p className=" border-b-4 border-b-zinc-600 mb-2">
-                    Decoração e itens para pc.
+                   Artigos publicados.
                 </p>
                 <img className='rounded-xl h-52 w-96' src={tableHome} alt="mesa de trabalho" />
             </Link>
