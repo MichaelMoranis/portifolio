@@ -1,5 +1,4 @@
 import About from "./components/About";
-import Articles from "./components/Articles";
 import Banner from "./components/Banner";
 import Button from "./components/Button";
 import Perfil from "./components/Perfil";
@@ -32,7 +31,6 @@ function App() {
         <div className="flex flex-col items-center content-center justify-center w-full px-4">
           <WorkText />
         </div>
-        <Articles />
       </section>
     </motion.div>
   );
