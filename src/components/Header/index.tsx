@@ -26,7 +26,7 @@ export default function Header({
 
   return (
     <header
-      className={`flex items-center justify-center w-full max-w-[900px] mx-auto left-1/2 -translate-x-1/2 fixed top-0 z-20 p-2 rounded-md ${
+      className={`font-regular flex items-center justify-center w-full max-w-[900px] mx-auto left-1/2 -translate-x-1/2 fixed top-0 z-20 p-2 rounded-md ${
         darkMode ? "bg-zinc-400" : "bg--700"
       } backdrop-blur-2xl`}
     >
@@ -38,7 +38,7 @@ export default function Header({
         <h1 className="font-bold text-2xl hover:underline">
           <Link to="/">moranisdev</Link>
         </h1>
-        <ul className="gap-4 font-bold text-2xl items-center flex [@media(max-width:770px)]:hidden">
+        <ul className="gap-4 text-2xl items-center flex [@media(max-width:770px)]:hidden font-bold">
           <li className="hover:underline">
             <Link
               to="/works"
