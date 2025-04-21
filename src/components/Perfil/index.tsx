@@ -1,4 +1,4 @@
-import perfil from "../../assets/perfilmod.png"
+import perfil from "../../assets/perfil.jpeg"
 
 function Perfil() {
     return (
