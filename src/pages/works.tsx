@@ -89,7 +89,7 @@ return (
       ease: [0, 0.71, 0.2, 1.01],
     }}
   >
-    <section className="flex flex-col items-center w-full p-4 mx-auto mt-10 md:mt-5 gap-6 lg:max-w-4xl">
+    <section className="flex flex-col items-center w-full p-2 mx-auto mt-10 md:mt-5 gap-6 lg:max-w-4xl">
       <About
         text="Aqui estão alguns dos projetos pessoais e  e trabalhos freelancer que ja realizei. Aqui conto com alguns projetos que construi enquanto estudava e também com projetos que desenvolvi para alguns dos meus clientes!"
       />
