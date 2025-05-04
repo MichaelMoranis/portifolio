@@ -42,13 +42,13 @@ function Articles() {
             Artigos publicados!
           </h3>
         </div>
-        <div className="flex flex-wrap gap-6 items-center justify-center">
+        <div className="flex flex-wrap gap-6 items-center justify-center w-full">
           {navArticles.map((article, index) => (
-            <div className="h-52 w-80 md:w-80 rounded-lg">
+            <div className="h-52 w-full md:w-80 rounded-lg">
               <a href={article.href}>
                 <img
                   key={index}
-                  className="rounded-xl h-52 w-96"
+                  className="rounded-xl h-52 w-full"
                   src={article.src}
                   loading="lazy"
                   height="300px"
