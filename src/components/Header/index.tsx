@@ -26,14 +26,12 @@ export default function Header({
 
   return (
     <header
-      className={`font-regular flex items-center justify-center w-full max-w-[900px] mx-auto left-1/2 -translate-x-1/2 fixed top-0 z-20 p-2 rounded-md ${
-        darkMode ? "bg-zinc-400" : "bg--700"
-      } backdrop-blur-2xl`}
+      className={`font-regular flex items-center justify-center w-full max-w-full mx-auto left-1/2 -translate-x-1/2 fixed top-0 z-20 p-2 rounded-b-md ${darkMode ? "bg-zinc-400" : "bg--700"
+        } backdrop-blur-2xl`}
     >
       <div
-        className={`flex items-center w-full max-w-4xl justify-between ${
-          darkMode ? "text-black" : "text-white"
-        }`}
+        className={`flex items-center w-full max-w-4xl justify-between ${darkMode ? "text-black" : "text-white"
+          }`}
       >
         <h1 className="font-bold text-2xl hover:underline">
           <Link to="/">moranisdev</Link>

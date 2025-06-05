@@ -44,11 +44,11 @@ function Articles() {
         </div>
         <div className="flex flex-wrap gap-6 items-center justify-center w-full">
           {navArticles.map((article, index) => (
-            <div className="h-52 w-full md:w-80 rounded-lg">
+            <div className="flex justify-center items-center h-52 w-full md:w-80 rounded-lg">
               <a href={article.href}>
                 <img
                   key={index}
-                  className="rounded-xl h-52 w-full"
+                  className="rounded-xl h-52 w-full bg-red-500 max-w-[400px]"
                   src={article.src}
                   loading="lazy"
                   height="300px"
