@@ -21,46 +21,54 @@ function Articles() {
       href: "https://dev.to/michaelmoranis/apredendo-construcao-de-apis-com-node-e-typescript-o11",
     },
   ];
+
   return (
-    <motion.div
-      className="box p-0"
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
+    <motion.section
+      className="w-full max-w-[1100px] mx-auto px-4 md:px-6 py-10"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.8,
-        delay: 0.5,
-        ease: [0, 0.71, 0.2, 1.01],
+        delay: 0.3,
+        ease: [0.22, 1, 0.36, 1],
       }}
     >
-      <section className="flex flex-col items-center gap-8 justify-evenly mt-5  md:flex-wrap lg:flex-wrap p-2 w-full md:flex-row max-w-[850px]">
-        <div className="flex flex-col items-center w-full gap-4">
-          <h1 className="font-regular font-bold text-2xl w-full text-center ">
-            Artigos publicados durante toda minha trajetória como desenvolvedor
-            web solo!
-          </h1>
-          <h3 className="font-regular font-bold text-xl">
-            Artigos publicados!
-          </h3>
-        </div>
-        <div className="flex flex-wrap gap-6 items-center justify-center w-full">
-          {navArticles.map((article, index) => (
-            <div className="flex justify-center items-center h-52 w-full md:w-80 rounded-lg">
-              <a href={article.href}>
-                <img
-                  key={index}
-                  className="rounded-xl h-52 w-full bg-red-500 max-w-[400px]"
-                  src={article.src}
-                  loading="lazy"
-                  height="300px"
-                  width="300px"
-                  alt={article.alt}
-                />
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-    </motion.div>
+      {/* Cabeçalho */}
+      <div className="text-center mb-10">
+        <h1 className="font-semibold text-2xl md:text-3xl mb-2">
+          Artigos publicados
+        </h1>
+        <p className="text-base opacity-80 max-w-2xl mx-auto">
+          Durante toda minha trajetória como desenvolvedor web solo, escrevi
+          sobre desafios, aprendizados e experiências reais de projetos.
+        </p>
+      </div>
+
+      {/* Galeria */}
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {navArticles.map((article, index) => (
+          <motion.a
+            key={index}
+            href={article.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-500"
+            whileHover={{ scale: 1.02 }}
+          >
+            <img
+              src={article.src}
+              alt={article.alt}
+              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <p className="absolute bottom-4 left-4 right-4 text-sm md:text-base font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              {article.alt}
+            </p>
+          </motion.a>
+        ))}
+      </div>
+    </motion.section>
   );
 }
 

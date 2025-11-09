@@ -4,7 +4,7 @@ interface AboutProps {
 
 function About({ text }: AboutProps) {
   return (
-    <div className="font-regular flex items-center justify-center font-bold text-xl w-full p-2">
+    <div className="mt-4 text-zinc-400 dark:text-zinc-600 leading-relaxed text-base md:text-lg">
       {text}
     </div>
   );
