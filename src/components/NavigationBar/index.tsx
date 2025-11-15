@@ -60,7 +60,7 @@ export default function NavigationBar({ onClose, sidebarOpen }: NavigationBarPro
 
           <NavItem to="/articles" label="Artigos" icon={pc} onClose={onClose} />
 
-          <NavItem to="/images" label="Minhas Imagens" icon={images} onClose={onClose} />
+          <NavItem to="/images" label="Galeria Dev" icon={images} onClose={onClose} />
 
           <NavItem
             to="https://www.youtube.com/@moraniss/videos"
