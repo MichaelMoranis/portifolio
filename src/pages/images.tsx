@@ -7,10 +7,18 @@ import tableHome from "../assets/mesa-trabalho.jpg";
 import womam from "../pages/images/woman.jpg";
 import forest from "../pages/images/forest.jpg";
 
-function DevGallery() {
-  const [selectedImage, setSelectedImage] = useState(null);
+interface GalleryImage {
+  src: string;
+  title: string;
+  desc: string;
+  alt: string;
+  tag: string;
+}
 
-  const images = [
+function DevGallery() {
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+
+  const images: GalleryImage[] = [
     {
       src: tableHome,
       title: "Ambiente de Criação",
@@ -94,6 +102,7 @@ function DevGallery() {
               className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
             />
 
+            {/* Overlay */}
             <div
               className="
                 absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500 
