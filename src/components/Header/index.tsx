@@ -1,9 +1,10 @@
-import sunIcon from "../../assets/sun.png";
-import moon from "../../assets/moon-2.png";
 import { Link } from "react-router-dom";
+import { Dispatch, SetStateAction } from "react";
+
+import sunIcon from "../../assets/sun.png";
+import moonIcon from "../../assets/moon-2.png";
 import burguerMenu from "../../assets/hambuger.png";
 import closeMenu from "../../assets/close.png";
-import { Dispatch, SetStateAction } from "react";
 
 type HeaderProps = {
   onMenuClick: () => void;
@@ -26,79 +27,89 @@ export default function Header({
 
   return (
     <header
-      className={`font-regular flex items-center justify-center w-full max-w-full mx-auto left-1/2 -translate-x-1/2 fixed top-0 z-20 p-2 rounded-b-md ${darkMode ? "bg-zinc-400" : "bg--700"
-        } backdrop-blur-2xl`}
+      className={`
+        fixed top-0 left-0 w-full z-30
+        backdrop-blur-xl transition-colors duration-300 border-b
+        ${darkMode ? "bg-zinc-900/60 border-zinc-700" : "bg-white/40 border-zinc-200"}
+      `}
     >
       <div
-        className={`flex items-center w-full max-w-4xl justify-between ${darkMode ? "text-black" : "text-white"
-          }`}
+        className={`
+          mx-auto max-w-6xl px-6 py-3
+          flex items-center justify-between
+          transition-colors duration-300
+          ${darkMode ? "text-zinc-100" : "text-zinc-900"}
+        `}
       >
-        <h1 className="font-bold text-2xl hover:underline">
-          <Link to="/">moranisdev</Link>
+        {/* Logo */}
+        <h1 className="font-bold tracking-tight text-xl md:text-2xl">
+          <Link
+            to="/"
+            className="hover:opacity-80 transition-opacity"
+          >
+            moranisdev
+          </Link>
         </h1>
-        <ul className="gap-4 text-2xl items-center flex [@media(max-width:770px)]:hidden font-bold">
-          <li className="hover:underline">
-            <Link
-              to="/works"
-              className={
-                darkMode ? "text-black hover:text-zinc-100" : "text-white"
-              }
-            >
-              Projetos
-            </Link>
-          </li>
-          <li className="hover:underline">
-            <Link
-              to="https://www.youtube.com/@moraniss/videos"
-              className={
-                darkMode ? "text-black hover:text-zinc-100" : "text-white"
-              }
-            >
-              Youtube
-            </Link>
-          </li>
-          <li className="hover:underline">
-            <Link
-              to="/articles"
-              className={
-                darkMode ? "text-black hover:text-zinc-100" : "text-white"
-              }
-            >
-              Artigos
-            </Link>
-          </li>
-          <li className="hover:underline">
-            <Link
-              to="/images"
-              className={
-                darkMode ? "text-black hover:text-zinc-100" : "text-white"
-              }
-            >
-              Fotos
-            </Link>
-          </li>
-        </ul>
-        <nav className="flex justify-center gap-2 items-center relative z-30">
+
+        {/* Links Desktop */}
+        <nav className="hidden md:flex items-center gap-8 font-medium">
+          <Link
+            to="/works"
+            className="hover:opacity-70 transition-opacity"
+          >
+            Projetos
+          </Link>
+          <a
+            href="https://www.youtube.com/@moraniss/videos"
+            target="_blank"
+            className="hover:opacity-70 transition-opacity"
+          >
+            Youtube
+          </a>
+          <Link
+            to="/articles"
+            className="hover:opacity-70 transition-opacity"
+          >
+            Artigos
+          </Link>
+          <Link
+            to="/images"
+            className="hover:opacity-70 transition-opacity"
+          >
+            Galeria Dev
+          </Link>
+        </nav>
+
+        {/* Ações (tema + menu mobile) */}
+        <div className="flex items-center gap-4">
+          {/* Toggle theme */}
           <button
             onClick={toggleDisplayMode}
-            className="relative z-30"
-            id="mode"
+            aria-label="Alterar tema"
+            className="
+              p-2 rounded-xl transition 
+              hover:bg-zinc-800/20 dark:hover:bg-zinc-200/20
+            "
           >
             <img
-              src={darkMode ? moon : sunIcon}
-              className="h-8 w-8 sm:h-10 sm:w-10 md:w-12 md:h-12 rounded-full"
+              src={darkMode ? moonIcon : sunIcon}
+              className="w-7 h-7 md:w-8 md:h-8"
+              alt="Tema"
             />
           </button>
-          <div>
+
+          {/* Mobile toggle */}
+          <button
+            onClick={onMenuClick}
+            className="md:hidden p-2 rounded-lg hover:bg-zinc-800/20 dark:hover:bg-zinc-200/20"
+          >
             <img
               src={sidebarOpen ? closeMenu : burguerMenu}
-              onClick={onMenuClick}
-              className="[@media(min-width:770px)]:hidden h-8 w-8 md:w-12 md:h-12 rounded-full"
+              className="w-7 h-7"
               alt="Menu"
-              id="burguer"
             />
-          </div>
-        </nav>
+          </button>
+        </div>
       </div>
     </header>
   );

@@ -71,7 +71,7 @@ function DevGallery() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          Dev Gallery
+          Galeria Dev
         </motion.h1>
 
         <motion.p

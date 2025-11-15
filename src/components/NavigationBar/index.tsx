@@ -14,52 +14,54 @@ type NavigationBarProps = {
   sidebarOpen: boolean;
 };
 
-function NavigationBar({ onClose, sidebarOpen }: NavigationBarProps) {
+export default function NavigationBar({ onClose, sidebarOpen }: NavigationBarProps) {
   return (
     <>
-      {/* Backdrop (Fecha o menu ao clicar fora) */}
+      {/* Backdrop – clicável para fechar */}
       {sidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/40 backdrop-blur-md z-40"
           onClick={onClose}
         />
       )}
 
-      {/* Sidebar */}
+      {/* SIDEBAR */}
       <motion.nav
         initial={{ x: "100%" }}
         animate={{ x: sidebarOpen ? 0 : "100%" }}
-        transition={{ type: "spring", stiffness: 200, damping: 20 }}
-        className="fixed top-0 right-0 h-full w-64 bg-zinc-900 text-white  z-50 flex flex-col"
+        transition={{ type: "spring", stiffness: 260, damping: 25 }}
+        className="
+          fixed top-0 right-0 h-full w-72 
+          bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 
+          text-white z-50 flex flex-col shadow-2xl border-l border-white/10
+          backdrop-blur-xl
+        "
       >
-        {/* Botão de Fechar */}
+        {/* BOTÃO DE FECHAR */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-white hover:text-zinc-400 transition"
+          className="
+            absolute top-4 right-4 
+            w-10 h-10 rounded-full 
+            flex items-center justify-center
+            bg-white/10 hover:bg-white/20 
+            transition border border-white/20
+          "
         >
-          X
+          <span className="text-xl font-light">×</span>
         </button>
 
-        {/* Links */}
-        <ul className="mt-8 space-y-4 p-6">
-          <NavItem
-            to="/works"
-            label="Projetos"
-            icon={projects}
-            onClose={onClose}
-          />
-          <NavItem
-            to="/articles"
-            label="Artigos"
-            icon={pc}
-            onClose={onClose}
-          />
-          <NavItem
-            to="/images"
-            label="Minhas Imagens"
-            icon={images}
-            onClose={onClose}
-          />
+        {/* MENU */}
+        <ul className="mt-20 space-y-3 px-6">
+          <NavItem to="/works" label="Projetos" icon={projects} onClose={onClose} />
+
+          <NavItem to="/articles" label="Artigos" icon={pc} onClose={onClose} />
+
+          <NavItem to="/images" label="Minhas Imagens" icon={images} onClose={onClose} />
+
           <NavItem
             to="https://www.youtube.com/@moraniss/videos"
             label="Youtube"
@@ -68,25 +70,16 @@ function NavigationBar({ onClose, sidebarOpen }: NavigationBarProps) {
           />
         </ul>
 
-        {/* Ícones sociais */}
-        <div className=" flex justify-center gap-4 pb-6 mt-auto">
-          <SocialIcon
-            link="https://instagram.com"
-            icon={insta}
-            alt="Instagram"
-          />
+        {/* DIVISOR SUTIL */}
+        <div className="mt-6 mx-6 h-px bg-white/10" />
+
+        {/* REDES SOCIAIS – estilo premium */}
+        <div className="flex justify-center gap-5 pb-10 mt-auto">
+          <SocialIcon link="https://instagram.com" icon={insta} alt="Instagram" />
           <SocialIcon link="https://github.com" icon={github} alt="GitHub" />
-          <SocialIcon
-            link="https://linkedin.com"
-            icon={linkedin}
-            alt="LinkedIn"
-          />
+          <SocialIcon link="https://linkedin.com" icon={linkedin} alt="LinkedIn" />
         </div>
       </motion.nav>
     </>
   );
 }
-
-// Componente para os ícones sociais
-
-export default NavigationBar;
