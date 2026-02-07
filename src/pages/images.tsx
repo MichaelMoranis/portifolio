@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 import street from "../pages/images/street-01.jpg";
 import formig from "../pages/images/formig.jpg";
@@ -19,9 +19,29 @@ function DevGallery() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
   const handleImageError = useCallback((src: string) => {
     setImageErrors((prev) => new Set([...prev, src]));
+  }, []);
+
+  const handleImageLoad = useCallback((src: string) => {
+    setLoadedImages((prev) => new Set([...prev, src]));
+  }, []);
+
+  // Preload images on component mount
+  useEffect(() => {
+    const preloadImages = () => {
+      images.forEach((img) => {
+        const imgElement = new Image();
+        imgElement.onload = () => handleImageLoad(img.src);
+        imgElement.src = img.src;
+      });
+    };
+
+    // Start preloading after a short delay to ensure smooth initial render
+    const timer = setTimeout(preloadImages, 100);
+    return () => clearTimeout(timer);
   }, []);
 
   const images: GalleryImage[] = [
@@ -160,12 +180,21 @@ function DevGallery() {
                     <>
                       {/* Imagem com overlay */}
                       <div className="relative overflow-hidden h-96">
+                        {/* Skeleton Loader */}
+                        {!loadedImages.has(item.src) && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-700 dark:from-zinc-300 dark:via-zinc-200 dark:to-zinc-300 animate-pulse" />
+                        )}
+
                         <img
                           src={item.src}
                           alt={item.alt}
-                          loading="lazy"
+                          loading="eager"
+                          onLoad={() => handleImageLoad(item.src)}
                           onError={() => handleImageError(item.src)}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          className={`
+                            w-full h-full object-cover transition-transform duration-700 group-hover:scale-110
+                            ${loadedImages.has(item.src) ? "opacity-100" : "opacity-0"}
+                          `}
                         />
 
                         {/* Overlay com gradiente sofisticado */}
@@ -303,10 +332,14 @@ function DevGallery() {
               </button>
 
               <div className="flex-1 overflow-y-auto">
+                {!loadedImages.has(selectedImage.src) && (
+                  <div className="w-full h-96 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-700 dark:from-zinc-300 dark:via-zinc-200 dark:to-zinc-300 animate-pulse" />
+                )}
                 <img
                   src={selectedImage.src}
                   alt={selectedImage.alt}
-                  className="w-full object-cover"
+                  onLoad={() => handleImageLoad(selectedImage.src)}
+                  className={`w-full object-cover transition-opacity ${loadedImages.has(selectedImage.src) ? "opacity-100" : "opacity-0"}`}
                 />
 
                 <div className="p-6">
