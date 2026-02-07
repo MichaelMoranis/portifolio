@@ -76,8 +76,8 @@ function Perfil() {
               <button
                 className="
                   px-8 py-3 rounded-lg font-semibold
-                  border-2 border-zinc-300 dark:border-zinc-600 text-zinc-900 dark:text-zinc-100
-                  hover:bg-zinc-100 dark:hover:bg-zinc-800
+                  border-2 border-zinc-800 dark:border-zinc-300 text-zinc-900 dark:text-zinc-100
+                  hover:bg-zinc-900 hover:text-white dark:hover:bg-zinc-200 dark:hover:text-zinc-900
                   transition-all duration-300 hover:scale-105
                 "
               >
@@ -147,10 +147,11 @@ function Perfil() {
 
             {/* Badge Status */}
             <motion.div
-              className="absolute -bottom-3 -right-3 bg-gradient-to-r from-green-400 to-green-500 text-white font-semibold px-3 py-1.5 rounded-full text-xs shadow-lg z-20"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ repeat: Infinity, duration: 2 }}
+              className="absolute -bottom-3 -right-3 bg-gradient-to-r from-green-400 to-green-500 text-white font-semibold px-3 py-1.5 rounded-full text-xs shadow-lg z-20 flex items-center gap-1.5"
+              initial={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
             >
+              <span className="w-2 h-2 bg-white rounded-full"></span>
               Disponível
             </motion.div>
           </motion.div>
