@@ -38,22 +38,20 @@ function Perfil() {
             variants={itemVariants}
           >
             <motion.h1
-              className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-zinc-900 dark:text-zinc-100 mb-3 leading-tight"
+              className="font-bold text-zinc-50  dark:text-zinc-900  text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-3 leading-tight"
               variants={itemVariants}
             >
               Michael Moranis
             </motion.h1>
 
-            <motion.div
-              className="flex flex-col gap-2"
-              variants={itemVariants}
-            >
+            <motion.div className="flex flex-col gap-2" variants={itemVariants}>
               <p className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Developer • Designer • Creator
               </p>
 
               <p className="text-sm sm:text-base md:text-lg text-zinc-600 dark:text-zinc-400 max-w-md">
-                Especializado em web design, desenvolvimento frontend e fotografia criativa
+                Especializado em web design, desenvolvimento frontend e
+                fotografia criativa
               </p>
             </motion.div>
 
@@ -83,37 +81,6 @@ function Perfil() {
               >
                 Contato
               </button>
-            </motion.div>
-
-            {/* Stats/Info */}
-            <motion.div
-              className="flex gap-6 md:gap-8 mt-8 md:mt-10 justify-center md:justify-start text-sm"
-              variants={itemVariants}
-            >
-              <div>
-                <p className="font-bold text-lg text-zinc-900 dark:text-zinc-100">
-                  5+
-                </p>
-                <p className="text-zinc-600 dark:text-zinc-400">
-                  Anos de Exp.
-                </p>
-              </div>
-              <div>
-                <p className="font-bold text-lg text-zinc-900 dark:text-zinc-100">
-                  20+
-                </p>
-                <p className="text-zinc-600 dark:text-zinc-400">
-                  Projetos
-                </p>
-              </div>
-              <div>
-                <p className="font-bold text-lg text-zinc-900 dark:text-zinc-100">
-                  100%
-                </p>
-                <p className="text-zinc-600 dark:text-zinc-400">
-                  Satisfação
-                </p>
-              </div>
             </motion.div>
           </motion.div>
 
