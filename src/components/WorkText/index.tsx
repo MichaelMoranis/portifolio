@@ -1,16 +1,90 @@
+import { motion } from "framer-motion";
+
 function WorkText() {
+  const timelineEvents = [
+    {
+      year: "1996",
+      title: "Nascimento",
+      description: "Barreiras, BA",
+    },
+    {
+      year: "2019",
+      title: "Mudança",
+      description: "Cascavel, PR",
+    },
+    {
+      year: "2021",
+      title: "Início da Faculdade",
+      description: "Análise e Desenvolvimento de Sistemas",
+    },
+    {
+      year: "2024",
+      title: "Hoje",
+      description: "Desenvolvedor Web em evolução",
+    },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
   return (
-    <div className="flex flex-col w-full md:w-2/3 justify-end font-bold font-regular">
-      <p className="border-b-4 border-purple-900 w-10">1996</p>
-      <div>ano de nascimento em Barreiras BA.</div>
-      <p className="border-b-4 border-purple-900 w-10">2019</p>
-      <div>
-        Mudo para a cidade de Cascavel PR onde me interesso por programação em
-        2021 durante a pandemia!.
+    <motion.div
+      className="w-full md:w-2/3"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="space-y-6 md:space-y-8">
+        {timelineEvents.map((event, index) => (
+          <motion.div
+            key={index}
+            variants={itemVariants}
+            className="flex gap-4 md:gap-6"
+          >
+            {/* Ano - Coluna esquerda */}
+            <div className="flex-shrink-0 w-16 md:w-20">
+              <div className="text-sm md:text-base font-light text-zinc-500 dark:text-zinc-400">
+                {event.year}
+              </div>
+            </div>
+
+            {/* Divisor vertical minimalista */}
+            <div className="flex flex-col items-center">
+              <div className="w-1 h-1 bg-blue-500 dark:bg-blue-400 rounded-full" />
+              {index !== timelineEvents.length - 1 && (
+                <div className="w-0.5 h-16 md:h-20 bg-gradient-to-b from-zinc-300 to-transparent dark:from-zinc-600 dark:to-transparent" />
+              )}
+            </div>
+
+            {/* Conteúdo - Coluna direita */}
+            <div className="pb-4 md:pb-6">
+              <h3 className="text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-1">
+                {event.title}
+              </h3>
+              <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400">
+                {event.description}
+              </p>
+            </div>
+          </motion.div>
+        ))}
       </div>
-      <p className="border-b-4 border-purple-900 w-10">2021</p>
-      <div>Inicio da faculdade em análise e desenvolvimento de sistemas.</div>
-    </div>
+    </motion.div>
   );
 }
 
