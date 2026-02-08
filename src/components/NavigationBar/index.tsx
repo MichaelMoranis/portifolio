@@ -1,6 +1,5 @@
 import projects from "../../assets/project.png";
 import { AnimatePresence, motion } from "framer-motion";
-import youtube from "../../assets/youtube.png";
 import images from "../../assets/images.png";
 import pc from "../../assets/computer.png";
 import insta from "../../assets/instagram-.png";
@@ -67,12 +66,6 @@ export default function NavigationBar({ onClose, sidebarOpen }: NavigationBarPro
 
           <NavItem to="/images" label="Galeria Dev" icon={images} onClose={onClose} />
 
-          <NavItem
-            to="https://www.youtube.com/@moraniss/videos"
-            label="Youtube"
-            icon={youtube}
-            onClose={onClose}
-          />
         </ul>
 
         {/* DIVISOR SUTIL */}
