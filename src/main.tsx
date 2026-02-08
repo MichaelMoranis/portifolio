@@ -9,6 +9,7 @@ import Layout from "./components/LayoutRouter/Layout.tsx";
 import Works from "./pages/works.tsx";
 import Images from "./pages/images.tsx";
 import Articles from "./pages/articles.tsx";
+import Contact from "./pages/contact.tsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "articles",
         element: <Articles />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },

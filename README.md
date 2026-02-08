@@ -153,6 +153,13 @@ const filteredImages = selectedTag
 - Marcadores e divisor alinhados com a paleta azul do projeto
 - Leitura mais confortavel em ambos os temas
 
+**Pagina de Contato**
+- Criacao da rota e estrutura da pagina
+- Layout minimalista com card glass e grid responsivo
+- Links clicaveis (email, WhatsApp, LinkedIn e GitHub)
+- Ajustes de acessibilidade com foco visivel
+- Inclusao da foto de perfil alinhada ao titulo
+
 ---
 
 ## Commits Realizados

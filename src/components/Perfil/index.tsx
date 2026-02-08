@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import perfil from "../../assets/perfil.jpeg";
 
 function Perfil() {
@@ -60,34 +61,36 @@ function Perfil() {
               className="flex flex-col sm:flex-row gap-3 mt-6 md:mt-8 justify-center md:justify-start"
               variants={itemVariants}
             >
-              <button
+              <Link
+                to="/works"
                 className="
-                  px-8 py-3 rounded-lg font-semibold
+                  px-8 py-3 rounded-lg font-semibold text-center
                   bg-gradient-to-r from-blue-500 to-blue-600 text-white
                   hover:shadow-lg hover:shadow-blue-500/50
                   transition-all duration-300 hover:scale-105
                 "
               >
                 Ver Projetos
-              </button>
+              </Link>
 
-              <button
+              <Link
+                to="/contact"
                 className="
-                  px-8 py-3 rounded-lg font-semibold
+                  px-8 py-3 rounded-lg font-semibold text-center
                   bg-zinc-100 dark:bg-zinc-800 border-2 border-zinc-800 dark:border-zinc-300 text-zinc-900 dark:text-zinc-100
                   hover:bg-zinc-900 hover:text-white dark:hover:bg-zinc-200 dark:hover:text-zinc-900
                   transition-all duration-300 hover:scale-105
                 "
               >
                 Contato
-              </button>
+              </Link>
             </motion.div>
           </motion.div>
 
           {/* Imagem de Perfil */}
           <div className="relative flex-shrink-0">
             <motion.div
-              className="flex-shrink-0"
+              className="group flex-shrink-0"
               variants={itemVariants}
               whileHover={{ scale: 1.05, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -95,6 +98,9 @@ function Perfil() {
               <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72">
                 {/* Glow effect */}
                 <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500" />
+
+                {/* Loading Skeleton */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-700 dark:from-zinc-300 dark:via-zinc-200 dark:to-zinc-300 animate-pulse z-0" />
 
                 {/* Imagem */}
                 <motion.img
@@ -108,9 +114,6 @@ function Perfil() {
                   "
                   whileHover={{ scale: 1.05 }}
                 />
-
-                {/* Loading Skeleton */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-700 dark:from-zinc-300 dark:via-zinc-200 dark:to-zinc-300 animate-pulse" />
               </div>
             </motion.div>
 
