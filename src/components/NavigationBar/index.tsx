@@ -1,5 +1,5 @@
 import projects from "../../assets/project.png";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import youtube from "../../assets/youtube.png";
 import images from "../../assets/images.png";
 import pc from "../../assets/computer.png";
@@ -18,40 +18,45 @@ export default function NavigationBar({ onClose, sidebarOpen }: NavigationBarPro
   return (
     <>
       {/* Backdrop – clicável para fechar */}
-      {sidebarOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/40 backdrop-blur-md z-40"
-          onClick={onClose}
-        />
-      )}
+      <AnimatePresence>
+        {sidebarOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/55 backdrop-blur-lg z-40"
+            onClick={onClose}
+          />
+        )}
+      </AnimatePresence>
 
       {/* SIDEBAR */}
       <motion.nav
         initial={{ x: "100%" }}
         animate={{ x: sidebarOpen ? 0 : "100%" }}
         transition={{ type: "spring", stiffness: 260, damping: 25 }}
-        className="
-          fixed top-0 right-0 h-full w-72 
-          bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 
-          text-white z-50 flex flex-col shadow-2xl border-l border-white/10
-          backdrop-blur-xl
-        "
+        aria-hidden={!sidebarOpen}
+        className={`
+          fixed top-0 right-0 h-full w-80
+          bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950
+          text-white z-50 flex flex-col shadow-[0_10px_40px_rgba(0,0,0,0.55)]
+          border-l border-white/10 backdrop-blur-2xl
+          ${sidebarOpen ? "pointer-events-auto" : "pointer-events-none"}
+        `}
       >
         {/* BOTÃO DE FECHAR */}
         <button
           onClick={onClose}
           className="
-            absolute top-4 right-4 
-            w-10 h-10 rounded-full 
+            absolute top-4 right-4
+            w-10 h-10 rounded-full
             flex items-center justify-center
-            bg-white/10 hover:bg-white/20 
+            bg-white/10 hover:bg-white/20
             transition border border-white/20
+            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40
           "
         >
-          <span className="text-xl font-light">×</span>
+          <span className="text-2xl leading-none font-light">×</span>
         </button>
 
         {/* MENU */}
@@ -71,10 +76,10 @@ export default function NavigationBar({ onClose, sidebarOpen }: NavigationBarPro
         </ul>
 
         {/* DIVISOR SUTIL */}
-        <div className="mt-6 mx-6 h-px bg-white/10" />
+        <div className="mt-6 mx-6 h-px bg-gradient-to-r from-white/5 via-white/15 to-white/5" />
 
         {/* REDES SOCIAIS – estilo premium */}
-        <div className="flex justify-center gap-5 pb-10 mt-auto">
+        <div className="flex justify-center gap-4 pb-10 mt-auto">
           <SocialIcon link="https://instagram.com" icon={insta} alt="Instagram" />
           <SocialIcon link="https://github.com" icon={github} alt="GitHub" />
           <SocialIcon link="https://linkedin.com" icon={linkedin} alt="LinkedIn" />

@@ -30,7 +30,7 @@ function Layout() {
       />
 
       {/* Sidebar responsivo */}
-      {sidebarOpen && <NavigationBar onClose={toggleSideBar} sidebarOpen={sidebarOpen} />}
+      <NavigationBar onClose={toggleSideBar} sidebarOpen={sidebarOpen} />
 
       {/* Conteúdo principal responsivo */}
       <div
