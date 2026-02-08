@@ -146,6 +146,15 @@ const filteredImages = selectedTag
 
 ---
 
+### 4. Mudancas Recentes (UI/Temas)
+
+**WorkText (Timeline)**
+- Ajuste de contraste para light/dark no ano, titulo e descricao
+- Marcadores e divisor alinhados com a paleta azul do projeto
+- Leitura mais confortavel em ambos os temas
+
+---
+
 ## Commits Realizados
 
 Todas as alterações foram commitadas e enviadas para o repositório:
