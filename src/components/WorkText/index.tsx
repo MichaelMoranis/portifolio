@@ -59,7 +59,7 @@ function WorkText() {
           >
             {/* Ano - Coluna esquerda */}
             <div className="flex-shrink-0 w-16 md:w-20">
-              <div className="text-sm md:text-base font-light text-zinc-500 dark:text-zinc-400">
+              <div className="text-sm md:text-base font-light text-zinc-200 dark:text-zinc-900">
                 {event.year}
               </div>
             </div>
@@ -68,16 +68,16 @@ function WorkText() {
             <div className="flex flex-col items-center">
               <div className="w-1 h-1 bg-blue-500 dark:bg-blue-400 rounded-full" />
               {index !== timelineEvents.length - 1 && (
-                <div className="w-0.5 h-16 md:h-20 bg-gradient-to-b from-zinc-300 to-transparent dark:from-zinc-600 dark:to-transparent" />
+                <div className="w-0.5 h-16 md:h-20 bg-gradient-to-b from-blue-300/70 to-transparent dark:from-blue-400/50 dark:to-transparent" />
               )}
             </div>
 
             {/* Conteúdo - Coluna direita */}
             <div className="pb-4 md:pb-6">
-              <h3 className="text-base md:text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-1">
+              <h3 className="text-base md:text-lg font-semibold dark:text-zinc-900  mb-1">
                 {event.title}
               </h3>
-              <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400">
+              <p className="text-sm md:text-base text-zinc-200 dark:text-zinc-900">
                 {event.description}
               </p>
             </div>
