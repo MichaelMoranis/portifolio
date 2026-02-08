@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Dispatch, SetStateAction } from "react";
 
 import sunIcon from "../../assets/sun.png";
@@ -19,6 +19,8 @@ export default function Header({
   darkMode,
   setDarkMode,
 }: HeaderProps) {
+  const location = useLocation();
+
   function toggleDisplayMode() {
     const newMode = !darkMode ? "dark" : "light";
     setDarkMode(!darkMode);
@@ -52,7 +54,7 @@ export default function Header({
           <Link
             to="/"
             className={`
-              relative inline-block
+              group relative inline-block
               transition-all duration-300 ease-out
               hover:scale-105
               ${
@@ -78,62 +80,34 @@ export default function Header({
         <nav className="hidden lg:flex items-center gap-1 font-medium flex-1 justify-center">
           {[
             { label: "Projetos", path: "/works" },
-            { label: "Youtube", path: "https://www.youtube.com/@moraniss/videos", external: true },
             { label: "Artigos", path: "/articles" },
             { label: "Galeria Dev", path: "/images" },
           ].map((item) => (
             <div key={item.label}>
-              {item.external ? (
-                <a
-                  href={item.path}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <Link
+                to={item.path}
+                aria-current={location.pathname === item.path ? "page" : undefined}
+                className={`
+                  px-3 py-1.5 rounded-lg text-xs sm:text-sm md:text-base
+                  transition-all duration-300 ease-out
+                  relative group font-semibold
+                  ${
+                    darkMode
+                      ? "text-zinc-200 hover:bg-gradient-to-r hover:from-blue-400 hover:via-purple-400 hover:to-pink-400 hover:text-transparent hover:bg-clip-text"
+                      : "text-zinc-700 hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 hover:text-transparent hover:bg-clip-text"
+                  }
+                `}
+              >
+                {item.label}
+                <span
                   className={`
-                    px-3 py-1.5 rounded-lg text-xs sm:text-sm md:text-base
-                    transition-all duration-300 ease-out
-                    relative group font-semibold
-                    ${
-                      darkMode
-                        ? "text-zinc-200 hover:bg-gradient-to-r hover:from-blue-400 hover:via-purple-400 hover:to-pink-400 hover:text-transparent hover:bg-clip-text"
-                        : "text-zinc-700 hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 hover:text-transparent hover:bg-clip-text"
-                    }
+                    absolute bottom-1 left-4 right-4 h-0.5 scale-x-0
+                    group-hover:scale-x-100
+                    transition-transform duration-300 origin-left
+                    ${darkMode ? "bg-blue-400" : "bg-blue-600"}
                   `}
-                >
-                  {item.label}
-                  <span
-                    className={`
-                      absolute bottom-1 left-4 right-4 h-0.5 scale-x-0
-                      group-hover:scale-x-100
-                      transition-transform duration-300 origin-left
-                      ${darkMode ? "bg-blue-400" : "bg-blue-600"}
-                    `}
-                  />
-                </a>
-              ) : (
-                <Link
-                  to={item.path}
-                  className={`
-                    px-3 py-1.5 rounded-lg text-xs sm:text-sm md:text-base
-                    transition-all duration-300 ease-out
-                    relative group font-semibold
-                    ${
-                      darkMode
-                        ? "text-zinc-200 hover:bg-gradient-to-r hover:from-blue-400 hover:via-purple-400 hover:to-pink-400 hover:text-transparent hover:bg-clip-text"
-                        : "text-zinc-700 hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 hover:text-transparent hover:bg-clip-text"
-                    }
-                  `}
-                >
-                  {item.label}
-                  <span
-                    className={`
-                      absolute bottom-1 left-4 right-4 h-0.5 scale-x-0
-                      group-hover:scale-x-100
-                      transition-transform duration-300 origin-left
-                      ${darkMode ? "bg-blue-400" : "bg-blue-600"}
-                    `}
-                  />
-                </Link>
-              )}
+                />
+              </Link>
             </div>
           ))}
         </nav>
@@ -171,6 +145,8 @@ export default function Header({
           {/* Mobile toggle */}
           <button
             onClick={onMenuClick}
+            aria-label={sidebarOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={sidebarOpen}
             className={`
               lg:hidden p-2 rounded-xl
               transition-all duration-300 group
