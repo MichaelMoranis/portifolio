@@ -160,6 +160,10 @@ const filteredImages = selectedTag
 - Ajustes de acessibilidade com foco visivel
 - Inclusao da foto de perfil alinhada ao titulo
 
+**Deploy (Vercel)**
+- Adicionado `vercel.json` com rewrite para SPA (React Router)
+- Corrige 404 ao recarregar rotas secundarias em producao
+
 ---
 
 ## Commits Realizados
